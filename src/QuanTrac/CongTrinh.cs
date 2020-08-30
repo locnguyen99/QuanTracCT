@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +10,7 @@ namespace HocLai
     {
         [Key]
         [Column("MaCT")]
-        public string MaCT { get; set; }
+        public Guid MaCT { get; set; }
         [Column("TenCT")]
         public string TenCT { get; set; }
         [Column("DiaDiem")]

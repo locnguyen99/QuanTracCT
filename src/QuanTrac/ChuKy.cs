@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,6 +10,9 @@ namespace HocLai
     public class ChuKy
     {
         [Key]
+        [Column("MaCK")]
+        public Guid MaCK { get; set; }
+
         [Column("TenCK")]
         public string TenCK { get; set; }
 
@@ -17,7 +21,7 @@ namespace HocLai
 
         [Column("MaCT")]
         [ForeignKey("CongTrinh")]
-        public string MaCT { get; set; }
+        public Guid MaCT { get; set; }
 
         public CongTrinh CongTrinh { get; set; }
         public virtual ICollection<Moc> Mocs { get; set; }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HocLai
@@ -9,29 +10,44 @@ namespace HocLai
         [Key]
         [Column("TenTuyen")]
         public string TenTuyen { get; set; }
+
         [Column("KhoangCach")]
         public double KhoangCach { get; set; }
+
         [Column("SoMayTram")]
         public int SoMayTram { get; set; }
+
         [Column("ChenhCao")]
         public double ChenhCao { get; set; }
+
         [Column("DanhGia")]
         public string DanhGia { get; set; }
+
         [Column("GhiChu")]
         public string GhiChu { get; set; }
-        [Column("TenCK")]
+
+        [Column("MaCK")]
         [ForeignKey("ChuKy")]
-        public string TenCK { get; set; }
+        public Guid? MaCK { get; set; }
+
         [Column("LoaiMoc")]
-        public string LoaiMoc { get; set; }
+        public string LoaiMoc { get; set; } 
+
         [Column("DiemDau")]
         public string DiemDau { get; set; }
+
         [Column("DiemCuoi")]
-        public string DiemCuoi { get; set; }
+        public string DiemCuoi { get; set; } 
+
         [Column("SSTP")]
-        public string SSTP { get; set; }
+        public double? SSTP { get; set; }
+
         [Column("SHC")]
-        public string SHC { get; set; }
+        public double? SHC { get; set; }
+
+        [Column("MaTD")]
+        public  Guid MaTD { get; set; }
+
         public ChuKy ChuKy { get; set; }
     }
 }
