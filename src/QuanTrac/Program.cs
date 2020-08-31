@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using QuanTracCT.Services;
+﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using QuanTracCT.Entity;
+using QuanTracCT.Service;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,22 +9,6 @@ using System.Xml.Linq;
 
 namespace HocLai
 {
-   
-    public class QuanTracLunCTContext : DbContext
-    {
-        public DbSet<CongTrinh> CongTrinhs { get; set; }
-        public DbSet<ChuKy> ChuKys { get; set; }
-        public DbSet<Moc> Mocs{ get; set; }
-        public DbSet<TuyenDo> TuyenDos { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            var connectionString = "Server=localhost;Database=QuanTracLunCT;Trusted_Connection=True;";
-            optionsBuilder
-             .UseSqlServer(connectionString, providerOptions => providerOptions.CommandTimeout(60))
-             .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-        }
-    }
     class Program
     {
         static void Main(string[] args)

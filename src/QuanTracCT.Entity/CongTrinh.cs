@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HocLai
+namespace QuanTracCT.Entity
 {
     [Table("CongTrinh")]
     public class CongTrinh 

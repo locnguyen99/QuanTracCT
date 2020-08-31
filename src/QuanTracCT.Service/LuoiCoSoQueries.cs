@@ -1,4 +1,4 @@
-﻿using HocLai;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,10 +6,10 @@ using System.Linq;
 using System.Transactions;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System.Globalization;
+using QuanTracCT.Entity;
 
-namespace QuanTracCT.Services
+namespace QuanTracCT.Service
 {
     public class LuoiCoSoQueries
     {

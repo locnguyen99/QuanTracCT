@@ -1,22 +1,21 @@
-﻿using HocLai;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System.Data;
 using System.Linq;
+using QuanTracCT.Entity;
 
-namespace QuanTracCT.Services
+namespace QuanTracCT.Service
 {
     public class MoDauQueries
     {
-        public List<CongTrinh> GetCongTrinh(Guid mact)
+        public List<CongTrinh> GetCongTrinhs()
         {
             var dataContext = new QuanTracLunCTContext();
             //1.Cho biết tên, địa điểm công trình
             var query = from ct in dataContext.CongTrinhs
-                        where ct.MaCT == mact
                         select ct;
             return query.ToList();
         }

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HocLai
+namespace QuanTracCT.Entity
 {
     [Table("TuyenDo")]
     public class TuyenDo

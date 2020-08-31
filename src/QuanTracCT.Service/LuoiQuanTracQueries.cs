@@ -1,13 +1,13 @@
-﻿using HocLai;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Globalization;
 using System.Transactions;
+using QuanTracCT.Entity;
 
-namespace QuanTracCT.Services
+namespace QuanTracCT.Service
 {
     public class LuoiQuanTracQueries
     {
