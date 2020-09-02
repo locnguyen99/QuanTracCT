@@ -14,7 +14,7 @@ namespace QuanTracCT.Service
     public class LuoiCoSoQueries
     {
         //1.Lấy các mốc của công trình
-        public List<Moc> GetMocs(CongTrinh congTrinh) 
+        public List<Moc> GetMocs() 
         {
             var dataConText = new QuanTracLunCTContext();
             var query = from m in dataConText.Mocs
@@ -22,7 +22,7 @@ namespace QuanTracCT.Service
             return query.ToList();
         }
 
-        //2.Danh sách thông tin của mốc lưới cơ sở (or quan trắc)
+        //2.Danh mốc lưới cơ sở của công trình
         public List<Moc> GetMocs (string loaimoc)
         {
             var datacContext = new QuanTracLunCTContext();
@@ -32,93 +32,77 @@ namespace QuanTracCT.Service
             return query.ToList();
         }
 
-        //3.Lấy 1 mốc theo mã mốc
+        //3.Lấy mốc theo mã mốc
         public Moc GetMoc(Guid mamoc)
         {
             var dataConText = new QuanTracLunCTContext();
             var query = from m in dataConText.Mocs
                         where m.MaMoc == mamoc
                         select m;
-            //var moc = query.FirstOrDefault();   //khai báo thêm tên moc return.
-            return query.FirstOrDefault();     // trả về trực tiếp query
+            return query.FirstOrDefault();     
         }
 
-        //4.Lay chu ky theo ma cong trinh
-        public ChuKy GetChuKy(Guid mack)
-        {
-            var dataConText = new QuanTracLunCTContext();
-            var query = from ck in dataConText.ChuKys
-                        where ck.MaCK == mack
-                        select ck;
-            var chuKy = query.FirstOrDefault();
-            return chuKy;
-        }
-
-        //5.Lấy danh sách tuyến đo 
-        public List<TuyenDo> GetTuyenDos()
+        //4.Lấy danh sách tuyến đo móc cơ sở công trình
+        public List<TuyenDo> GetTuyenDos(string loaimoc)
         {
             var dataConText = new QuanTracLunCTContext();
             var query = from td in dataConText.TuyenDos
-                        where td.LoaiMoc == "MocCS"
+                        where td.LoaiMoc == loaimoc
                         select td;
             return query.ToList();
         }
 
-        //6.Lấy 1 tuyến đo theo mã tuyến đo       // theo ma la duy nhat' r k can + dk
-        public TuyenDo GetTuyenDo(Guid matd)
+        //5.Lấy tuyến đo theo mã tuyến đo
+        public TuyenDo GetTuyenDo(Guid matdcs)
         {
             var dataConText = new QuanTracLunCTContext();
             var query = from td in dataConText.TuyenDos
-                        where td.MaTD == matd
+                        where td.MaTD == matdcs
                         select td;
-            var tuyendo = query.FirstOrDefault();
-            return tuyendo;
+            return query.FirstOrDefault();
         }
 
-        //7.Tổng khoảng cách tuyến đo theo chu ky (o day lay chu ky 6)
+        //6.Tổng khoảng cách tuyến đo của chu kỳ 6
 
         public double GetSumtd(Guid mack6, string loaimoc)
         {
             var dataConText = new QuanTracLunCTContext();
-            var query = dataConText.TuyenDos.Where(t => t.LoaiMoc == loaimoc && t.MaCK == mack6).Select(t => t.KhoangCach).Sum();
-            var tong = query;
-            return tong;
-                        
+            var query = dataConText.TuyenDos
+                .Where(t => t.LoaiMoc == loaimoc && t.MaCK == mack6)
+                .Select(t => t.KhoangCach)
+                .Sum();
+            var sum = query;
+            return sum;
         }
 
-        //8.Tổng số tam may của tuyến đo chu ky 6
+        //7.Tổng số trạm máy chu kỳ 6
         public double GetSumtm(Guid mack6, string loaimoc)
         {
             var dataConText = new QuanTracLunCTContext();
-            var query = dataConText.TuyenDos.Where(td => td.MaCK == mack6 && td.LoaiMoc == loaimoc).Sum(td => td.SoMayTram);
-            var tongtm = query;
-            return tongtm;
+            var query = dataConText.TuyenDos
+                .Where(td => td.MaCK == mack6 && td.LoaiMoc == loaimoc)
+                .Sum(td => td.SoMayTram);
+            var sumtm = query;
+            return sumtm;
         }
 
-        //9.Tổng chênh cao của tuyến đo chu ky 6
+        //8.Tổng chênh cao tuyến đo cua chu ky 6
         public double GetSumcc(Guid mack6,string loaimoc)
         {
             var dataConText = new QuanTracLunCTContext();
-            var query = dataConText.TuyenDos.Where(td => td.MaCK == mack6 && td.LoaiMoc == loaimoc).Sum(td => td.ChenhCao);
-            var tongcc = query;
-            return tongcc;
-                        
+            var query = dataConText.TuyenDos
+                .Where(td => td.MaCK == mack6 && td.LoaiMoc == loaimoc)
+                .Sum(td => td.ChenhCao);
+            var sumcc = query;
+            return sumcc;
         }
 
-        //19.Lấy tuyến đo theo công trình
-        public List<TuyenDo> GetTuyenDos (CongTrinh congTrinh)
+        //9.Lấy danh sách tuyến đo của chu kỳ 6
+        public List<TuyenDo> GetTuyenDocks(Guid macsck6)
         {
             var dataConText = new QuanTracLunCTContext();
             var query = from td in dataConText.TuyenDos
-                        select td;
-            return query.ToList();
-        }
-
-        //11.Lấy tuyến đo theo chu kỳ
-        public List<TuyenDo> GetTuyenDos(ChuKy chuKy)
-        {
-            var dataConText = new QuanTracLunCTContext();
-            var query = from td in dataConText.TuyenDos
+                        where td.MaCK == macsck6
                         select td;
             return query.ToList();
         }
