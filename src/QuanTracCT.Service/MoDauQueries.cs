@@ -23,17 +23,54 @@ namespace QuanTracCT.Service
         }
 
         //2.Lấy công trình theo mã công trình
+        public CongTrinh GetCongTrinh(Guid mact)
+        {
+            var dataContext = QuanTracLunCTContext();
+            var query = from
+        }
         //3.Lấy danh sách chu kỳ
         //4.Lây danh sách chu kỳ theo công trình
         //5.Lấy chu kỳ theo mã chu kỳ
         //6.Lấy danh sách mốc theo công trình
+
         //7.Lấy danh sách mốc theo chu kỳ
         //8.Lấy danh sách mốc 
+        public List<Moc> GetMocs()
+        {
+            var dataConText = new QuanTracLunCTContext();
+            var query = from m in dataConText.Mocs
+                        select m;
+            return query.ToList();
+        }
         //9.Lấy mốc theo mã mốc
+        public Moc GetMoc(Guid mamoc)
+        {
+            var dataConText = new QuanTracLunCTContext();
+            var query = from m in dataConText.Mocs
+                        where m.MaMoc == mamoc
+                        select m;
+            return query.FirstOrDefault();
+        }
         //10.Lấy danh sách tuyến đo theo công trình
         //11.Lấy danh sách tuyến đo theo chu kỳ
+        public List<TuyenDo> GetTuyenDocks(Guid macsck6)
+        {
+            var dataConText = new QuanTracLunCTContext();
+            var query = from td in dataConText.TuyenDos
+                        where td.MaCK == macsck6
+                        select td;
+            return query.ToList();
+        }
         //12.Lấy danh sách tuyến đo
         //13.Lấy tuyến đo theo tuyến đo
+        public TuyenDo GetTuyenDo(Guid matdcs)
+        {
+            var dataConText = new QuanTracLunCTContext();
+            var query = from td in dataConText.TuyenDos
+                        where td.MaTD == matdcs
+                        select td;
+            return query.FirstOrDefault();
+        }
         //14.Tổng số chu kỳ công trình
         //15.Tổng số chu kỳ theo một công trình
         //16.Tổng số mốc của công trình

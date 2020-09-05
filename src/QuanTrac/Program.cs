@@ -15,14 +15,14 @@ namespace HocLai
         {
             var dataContext = new QuanTracLunCTContext();
 
-            //var moDau = new MoDauQueries();
-            //var congTrinhs = moDau.GetCongTrinhs();
-            //var mact = "F155E5BE-9364-4614-A106-B4D2CB8E8444";
-            //var chukys = moDau.GetChuKys(new Guid(mact));
-            //var mack = "CE5288DB-0000-42DA-ABDB-9801D86DCA26";
-            //var mocs = moDau.GetMocs(new Guid(mack));
-            //var moccts = moDau.GetMocCTs(new Guid(mact));
-            //var macks = moDau.GetMocCKs(new Guid(mact));
+            var moDau = new MoDauQueries();
+            var congtrinhs = moDau.GetCongTrinhs();
+            var mact = "F155E5BE-9364-4614-A106-B4D2CB8E8444";
+            var chukys = moDau.GetChuKys(new Guid(mact));
+            var mack = "CE5288DB-0000-42DA-ABDB-9801D86DCA26";
+            var mocs = moDau.GetMocs(new Guid(mack));
+            var moccts = moDau.GetMocCTs(new Guid(mact));
+            var macks = moDau.GetMocCKs(new Guid(mact));
 
             //var mocCS = new LuoiCoSoQueries();
             //var mocct = mocCS.GetMocs();

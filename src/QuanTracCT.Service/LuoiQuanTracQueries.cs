@@ -15,6 +15,16 @@ namespace QuanTracCT.Service
         //1.Lấy danh sách mốc lưới quang trắc
         //2.Lấy danh sách tuyến đo lưới quang trắc
         //3.Tổng khoảng cách tuyến đo lưới quang trắc mỗi chu kỳ
+        public double GetSumtd(Guid mack6, string loaimoc)
+        {
+            var dataConText = new QuanTracLunCTContext();
+            var query = dataConText.TuyenDos
+                .Where(t => t.LoaiMoc == loaimoc && t.MaCK == mack6)
+                .Select(t => t.KhoangCach)
+                .Sum();
+            var sum = query;
+            return sum;
+        }
         //4.Tổng số trạm máy tuyến đo lưới quang trắc mỗi chy kỳ
         //5.Tổng chênh cao tuyến đo lưới quang trắc mỗi chu kỳ
         //6.Tổng khoảng cách tuyến đo lưới quang trắc mỗi công trình
