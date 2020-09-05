@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuanTracCT", "QuanTrac\QuanTracCT.csproj", "{410BD698-0FBA-4B86-A370-E954F0E09C93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanTracCT.Api", "QuanTracCT.Api\QuanTracCT.Api.csproj", "{11789D0F-C402-4118-BB3D-42E790C2FF2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanTracCT.Entity", "QuanTracCT.Entity\QuanTracCT.Entity.csproj", "{375AF0A0-2E22-4B76-A798-CA204003B2C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanTracCT.Service", "QuanTracCT.Service\QuanTracCT.Service.csproj", "{1BFB2DC2-2A66-413E-A67A-790AFC02B6B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{410BD698-0FBA-4B86-A370-E954F0E09C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410BD698-0FBA-4B86-A370-E954F0E09C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410BD698-0FBA-4B86-A370-E954F0E09C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410BD698-0FBA-4B86-A370-E954F0E09C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11789D0F-C402-4118-BB3D-42E790C2FF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11789D0F-C402-4118-BB3D-42E790C2FF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11789D0F-C402-4118-BB3D-42E790C2FF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11789D0F-C402-4118-BB3D-42E790C2FF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{375AF0A0-2E22-4B76-A798-CA204003B2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375AF0A0-2E22-4B76-A798-CA204003B2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375AF0A0-2E22-4B76-A798-CA204003B2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375AF0A0-2E22-4B76-A798-CA204003B2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFB2DC2-2A66-413E-A67A-790AFC02B6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFB2DC2-2A66-413E-A67A-790AFC02B6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFB2DC2-2A66-413E-A67A-790AFC02B6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFB2DC2-2A66-413E-A67A-790AFC02B6B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C7B26AA-ABAE-4EE9-9304-E2932872CD07}
+	EndGlobalSection
+EndGlobal
