@@ -25,15 +25,77 @@ namespace QuanTracCT.Service
         //2.Lấy công trình theo mã công trình
         public CongTrinh GetCongTrinh(Guid mact)
         {
-            var dataContext = QuanTracLunCTContext();
-            var query = from
+            var dataContext = new QuanTracLunCTContext();
+            var query = from ct in dataContext.CongTrinhs
+                        where ct.MaCT == mact
+                        select ct;
+            return query.FirstOrDefault();
         }
+
         //3.Lấy danh sách chu kỳ
+        public List<ChuKy> GetChuKies()
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = from ck in dataContext.ChuKys
+                        select ck;
+            return query.ToList();
+        }
+
         //4.Lây danh sách chu kỳ theo công trình
+        public List<ChuKy> GetChuKieCTs(Guid mact)
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = from ck in dataContext.ChuKys
+                        join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT into tam
+                        from t in tam.DefaultIfEmpty()
+                        where t.MaCT == mact
+                        select ck;
+            return query.ToList();
+        }
+
         //5.Lấy chu kỳ theo mã chu kỳ
+        public ChuKy GetChuKy(Guid mack)
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = from ck in dataContext.ChuKys
+                        where ck.MaCK == mack
+                        select ck;
+            return query.FirstOrDefault();
+        }
+
         //6.Lấy danh sách mốc theo công trình
+        public List<QTLun> GetMocCTs(Guid mact)
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = from m in dataContext.Mocs
+                        join ck in dataContext.ChuKys on m.MaCK equals ck.MaCK into tam
+                        from t in tam.DefaultIfEmpty()
+                        join ct in dataContext.CongTrinhs on t.MaCT equals ct.MaCT
+                        where ct.MaCT == mact
+                        select new QTLun
+                        {
+                            MaMoc = m.MaMoc,
+                            TenMoc = m.TenMoc,
+                            TenCK = t.TenCK,
+                            MaCK = t.MaCK,
+                            MaCT = ct.MaCT,
+                            TenCT = ct.TenCT
+                        };
+            return query.ToList();
+        }
 
         //7.Lấy danh sách mốc theo chu kỳ
+        public List<Moc> GetMocCKs(Guid mack)
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = from m in dataContext.Mocs
+                        join ck in dataContext.ChuKys on m.MaCK equals ck.MaCK into tam
+                        from t in tam.DefaultIfEmpty()
+                        where t.MaCK == mack
+                        select m;
+            return query.ToList();
+        }
+
         //8.Lấy danh sách mốc 
         public List<Moc> GetMocs()
         {
@@ -42,6 +104,7 @@ namespace QuanTracCT.Service
                         select m;
             return query.ToList();
         }
+
         //9.Lấy mốc theo mã mốc
         public Moc GetMoc(Guid mamoc)
         {
@@ -51,127 +114,79 @@ namespace QuanTracCT.Service
                         select m;
             return query.FirstOrDefault();
         }
+
         //10.Lấy danh sách tuyến đo theo công trình
+        public List<QTLun> GetTuyenDoCTs(Guid mact)
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = from td in dataContext.TuyenDos
+                        join ck in dataContext.ChuKys on td.MaCK equals ck.MaCK into tam
+                        from t in tam.DefaultIfEmpty()
+                        join ct in dataContext.CongTrinhs on t.MaCT equals ct.MaCT
+                        where ct.MaCT == mact
+                        select new QTLun
+                        {
+                            MaTD = td.MaTD,
+                            TenTuyen = td.TenTuyen,
+                            TenCK = t.TenCK,
+                            MaCK = t.MaCK,
+                            MaCT = ct.MaCT,
+                            TenCT = ct.TenCT
+                        };
+            return query.ToList();
+        }
+
         //11.Lấy danh sách tuyến đo theo chu kỳ
-        public List<TuyenDo> GetTuyenDocks(Guid macsck6)
+        public List<TuyenDo> GetTuyenDocCKs(Guid mack)
         {
             var dataConText = new QuanTracLunCTContext();
             var query = from td in dataConText.TuyenDos
-                        where td.MaCK == macsck6
+                        join ck in dataConText.ChuKys on td.MaCK equals ck.MaCK into tam
+                        from t in tam.DefaultIfEmpty()
+                        where t.MaCK == mack
                         select td;
             return query.ToList();
         }
+
         //12.Lấy danh sách tuyến đo
+        public List<TuyenDo> GetTuyenDos()
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = from td in dataContext.TuyenDos
+                        select td;
+            return query.ToList();
+        }
+
         //13.Lấy tuyến đo theo tuyến đo
-        public TuyenDo GetTuyenDo(Guid matdcs)
+        public TuyenDo GetTuyenDo(Guid matd)
         {
             var dataConText = new QuanTracLunCTContext();
             var query = from td in dataConText.TuyenDos
-                        where td.MaTD == matdcs
+                        where td.MaTD == matd
                         select td;
             return query.FirstOrDefault();
         }
-        //14.Tổng số chu kỳ công trình
-        //15.Tổng số chu kỳ theo một công trình
-        //16.Tổng số mốc của công trình
-        //17.Tổng số mốc của chu kỳ
-        //18.Tổng số tuyến của công trình
-        //19.Tổng số tuyến của chu kỳ
 
-
-
-
-
-
-
-
-
-
-
-        //2.Cho biết danh sách chu kỳ cua công trình
-        public List<ChuKy> GetChuKys(Guid mact)
+        //14.Tổng số chu kỳ theo một công trình
+        public SumQTL GetSumCKCT(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
-            var query = from ck in dataContext.ChuKys
-                        where ck.MaCT == mact
-                        select ck;
-            return query.ToList();
+            var query = (from ct in dataContext.CongTrinhs
+                        join ck in dataContext.ChuKys on ct.MaCT equals ck.MaCT into tam
+                        from t in tam.DefaultIfEmpty()
+                        where ct.MaCT == mact
+                        group new {ct.MaCT} by new {ct.MaCT,ct.TenCT} into nhom
+                        select new SumQTL
+                        {
+                            MaCT = nhom.Key,
+                            TenCT = nhom.Key,
+                            SoCKCT = nhom.Count()
+                        });
+            return query.FirstOrDefault();
         }
 
-        //3.Cho biết tên mốc của mỗi chu kỳ
-        public List<Moc> GetMocs(Guid mack)
-        {
-            var dataconText = new QuanTracLunCTContext();
-            var query = from m in dataconText.Mocs
-                        where m.MaCK == mack
-                        select m;
-            return query.ToList();
-        }
-
-        //4.Danh sach moc theo cong trinh
-        public List<MocCT> GetMocCTs(Guid mact)
-        {
-            var dataContext = new QuanTracLunCTContext();
-
-            var query = (from m in dataContext.Mocs
-                         join ck in dataContext.ChuKys on m.MaCK equals ck.MaCK into tam
-                         from t in tam.DefaultIfEmpty()
-                         join ct in dataContext.CongTrinhs on t.MaCT equals ct.MaCT
-                         where t.MaCT == mact
-                         select new MocCT
-                         {
-                             MaMoc=m.MaMoc,
-                             TenMoc=m.TenMoc,
-                             MaCT=ct.MaCT,
-                             TenCT=ct.TenCT,
-                             TenCK=t.TenCK,
-                             MaCK=t.MaCK
-                         });
-
-            return query.ToList();
-        }
-
-
-
-        //var dataContext = new QuanTracLunCTContext();
-        //public List<Moc> GetMocs(Guid mact)
-        //{
-        //    using (dataContext = new QuanTracLunCTContext(Dbset.GetConnectionString()))
-        //    {
-        //        var query = (from m in dataContext.Mocs
-        //                     join ck in dataContext.ChuKys on m.MaCK equals ck.MaCK into tam
-        //                     from t in tam.DefaultIfEmpty()
-        //                     where t.MaCT == mact
-        //                     select new
-        //                     {
-        //                         m.MaMoc,
-        //                         t.MaCT
-        //                     });
-        //        return query.ToList();
-        //    }
-        //}
-
-        //public List<MocCK> GetMocCKs(Guid mact)
-        //{
-        //    var dataContext = new QuanTracLunCTContext();
-        //    var query = from ck in dataContext.ChuKys
-        //                join m in dataContext.Mocs on ck.MaCK equals m.MaCK
-        //                join ct in dataContext.CongTrinhs on ck.MaCK equals ct.MaCT into tam
-        //                from t in tam.DefaultIfEmpty()
-        //                where t.MaCT == mact
-        //                group m by m.MaMoc into nhom
-        //                select new MocCK
-        //                {
-        //                    TenCK=ck.TenCK,
-        //                    MaCK=ck.MaCK,
-        //                    TenCT=t.TenCT,
-        //                    MaCT=t.MaCT
-                            
-        //                };
-        //    return query.ToList();
-        //}
-
-        public List<MocCK> GetMocCKs(Guid mact)
+        //15. Tổng số mốc theo một công trình
+        public SumQTL GetSumMocCT(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -179,19 +194,76 @@ namespace QuanTracCT.Service
                          from t in tam.DefaultIfEmpty()
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ct.MaCT == mact
-                         group new { ck = t.MaCK,ct=ct.MaCT } by new { t.MaCK,ct.MaCT,ct.TenCT,ck.TenCK } into nhom
-                         select new MocCK
+                         group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK } into nhom
+                         select new SumQTL
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
                              MaCK = nhom.Key.MaCK,
                              MaCT = nhom.Key.MaCT,
-                             SoMoc = nhom.Count()
+                             SoMocCT = nhom.Count()
 
-                         }) ;
-            return query.ToList();
+                         });
+            return query.FirstOrDefault();
         }
 
-    }   
-    
+        //16.Tổng số mốc của mỗi chu kỳ
+        public SumQTL GetSumMocCK(Guid mact)
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = (from ck in dataContext.ChuKys
+                         join m in dataContext.Mocs on ck.MaCK equals m.MaCK into tam
+                         from t in tam.DefaultIfEmpty()
+                         where t.MaCK == mact
+                         group new { ck } by new { t.MaCK, ck.TenCK } into nhom
+                         select new SumQTL
+                         {
+                             MaCK = nhom.Key,
+                             TenCK = nhom.Key,
+                             SoMocCK = nhom.Count()
+                         });
+            return query.FirstOrDefault();
+        }
+
+
+        //17.Tổng số tuyến của mỗi chu kỳ
+        public SumQTL GetSumTuyenCK(Guid mact)
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = (from ck in dataContext.ChuKys
+                         join td in dataContext.TuyenDos on ck.MaCK equals td.MaCK into tam
+                         from t in tam.DefaultIfEmpty()
+                         where t.MaCK == mact
+                         group new { ck } by new { t.MaCK, ck.TenCK } into nhom
+                         select new SumQTL
+                         {
+                             MaCK = nhom.Key,
+                             TenCK = nhom.Key,
+                             SoTuyenCK = nhom.Count()
+                         });
+            return query.FirstOrDefault();
+        }
+
+        //18.Tổng số tuyến của mỗi công trình
+        public SumQTL GetSumTuyenCT(Guid mact)
+        {
+            var dataContext = new QuanTracLunCTContext();
+            var query = (from ck in dataContext.ChuKys
+                         join td in dataContext.TuyenDos on ck.MaCK equals td.MaCK into tam
+                         from t in tam.DefaultIfEmpty()
+                         join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
+                         where ct.MaCT == mact
+                         group new { ct } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK } into nhom
+                         select new SumQTL
+                         {
+                             TenCK = nhom.Key.TenCK,
+                             TenCT = nhom.Key.TenCT,
+                             MaCK = nhom.Key.MaCK,
+                             MaCT = nhom.Key.MaCT,
+                             SoTuyenCT = nhom.Count()
+
+                         });
+            return query.FirstOrDefault();
+        }
+    }
 }

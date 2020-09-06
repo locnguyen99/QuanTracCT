@@ -19,7 +19,7 @@ namespace QuanTracCT.Service
         }
 
         //2.Lấy danh sách mốc nghiêng theo công trình
-        public List<MocN> GetMocNghiengCTs( Guid mact)
+        public List<QTNghieng> GetMocNghiengCTs( Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = from mn in dataContext.MocNghiengs
@@ -27,7 +27,7 @@ namespace QuanTracCT.Service
                         from t in tam.DefaultIfEmpty()
                         join ct in dataContext.CongTrinhs on t.MaCT equals ct.MaCT
                         where ct.MaCT == mact
-                        select new MocN
+                        select new QTNghieng
                         {
                             MaMocN = mn.MaMocN,
                             TenMocN = mn.TenMocN,
@@ -70,7 +70,7 @@ namespace QuanTracCT.Service
         }
 
         //6.Tính tổng số mốc nghiêng của công trình
-        public SumMocN GetSumMocNCT(Guid mact)
+        public SumQTN GetSumMocNCT(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -79,7 +79,7 @@ namespace QuanTracCT.Service
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ct.MaCT == mact
                          group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK } into nhom
-                         select new SumMocN
+                         select new SumQTN
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
@@ -91,14 +91,14 @@ namespace QuanTracCT.Service
         }
 
         //7.Tính tổng số mốc nghiêng của chu kỳ
-        public SumMocN GetSumMocNCK (Guid mack)
+        public SumQTN GetSumMocNCK (Guid mack)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = from mn in dataContext.MocNghiengs
                         join ck in dataContext.ChuKys on mn.MaCK equals ck.MaCK
                         where ck.MaCK == mack
                         group ck by ck.MaCK into nhom
-                        select new SumMocN
+                        select new SumQTN
                         {
                             MaCK = nhom.Key,
                             TenCK = nhom.Key,
@@ -108,7 +108,7 @@ namespace QuanTracCT.Service
         }
 
         //8.Tổng số mốc nghiêng lưới cơ sở công trình
-        public SumMocN GetSumMocNLoaiCSCT(Guid mact, string loaimoc)
+        public SumQTN GetSumMocNLoaiCSCT(Guid mact, string loaimoc)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -117,7 +117,7 @@ namespace QuanTracCT.Service
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ct.MaCT == mact && t.LoaiMoc == loaimoc
                          group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK,t.LoaiMoc } into nhom
-                         select new SumMocN
+                         select new SumQTN
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
@@ -130,7 +130,7 @@ namespace QuanTracCT.Service
         }
 
         //9.Tổng số mốc nghiêng lưới quan trắc chu kỳ
-        public SumMocN GetSumMocNLoaiQTCK(Guid mack, string loaimoc)
+        public SumQTN GetSumMocNLoaiQTCK(Guid mack, string loaimoc)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -139,7 +139,7 @@ namespace QuanTracCT.Service
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ck.MaCK == mack && t.LoaiMoc == loaimoc
                          group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK, t.LoaiMoc } into nhom
-                         select new SumMocN
+                         select new SumQTN
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
@@ -152,7 +152,7 @@ namespace QuanTracCT.Service
         }
 
         //10.Tổng số mốc nghiêng lưới quan trắc công trình
-        public SumMocN GetSumMocNLoaiQTCT(Guid mact, string loaimoc)
+        public SumQTN GetSumMocNLoaiQTCT(Guid mact, string loaimoc)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -161,7 +161,7 @@ namespace QuanTracCT.Service
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ct.MaCT == mact && t.LoaiMoc == loaimoc
                          group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK, t.LoaiMoc } into nhom
-                         select new SumMocN
+                         select new SumQTN
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
@@ -174,7 +174,7 @@ namespace QuanTracCT.Service
         }
 
         //11.Tổng số mốc nghiêng lưới cơ sở chu kỳ
-        public SumMocN GetSumMocNLoaiCSCK(Guid mack, string loaimoc)
+        public SumQTN GetSumMocNLoaiCSCK(Guid mack, string loaimoc)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -183,7 +183,7 @@ namespace QuanTracCT.Service
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ck.MaCK == mack && t.LoaiMoc == loaimoc
                          group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK, t.LoaiMoc } into nhom
-                         select new SumMocN
+                         select new SumQTN
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
@@ -196,7 +196,7 @@ namespace QuanTracCT.Service
         }
 
         //12.Lấy danh sách các điểm nghiêng theo công trình
-        public List<DiemN> GetDiemNghiengCTs(Guid mact)
+        public List<QTNghieng> GetDiemNghiengCTs(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = from dm in dataContext.DiemNghiengs
@@ -204,7 +204,7 @@ namespace QuanTracCT.Service
                         from t in tam.DefaultIfEmpty()
                         join ct in dataContext.CongTrinhs on t.MaCT equals ct.MaCT
                         where ct.MaCT == mact
-                        select new DiemN
+                        select new QTNghieng
                         {
                             MaDiem = dm.MaDiem,
                             TenDiem = dm.TenDiem,
@@ -243,7 +243,7 @@ namespace QuanTracCT.Service
             return query.FirstOrDefault();
         }
         //16.Số điểm nghiêng của công trình
-        public SumDiemN GetSumDiemNCT(Guid mact)
+        public SumQTN GetSumDiemNCT(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -252,7 +252,7 @@ namespace QuanTracCT.Service
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ct.MaCT == mact
                          group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK } into nhom
-                         select new SumDiemN
+                         select new SumQTN
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
@@ -264,14 +264,14 @@ namespace QuanTracCT.Service
         }
 
         //17.Số điểm nghiêng của chu kỳ
-        public SumDiemN GetSumDiemNCK(Guid mack)
+        public SumQTN GetSumDiemNCK(Guid mack)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = from dm in dataContext.DiemNghiengs
                         join ck in dataContext.ChuKys on dm.MaCK equals ck.MaCK
                         where ck.MaCK == mack
                         group ck by ck.MaCK into nhom
-                        select new SumDiemN
+                        select new SumQTN
                         {
                             MaCK = nhom.Key,
                             TenCK = nhom.Key,
@@ -280,7 +280,7 @@ namespace QuanTracCT.Service
             return query.FirstOrDefault();
         }
         //18.Lấy danh sách các đỉnh nghiêng theo công trình
-        public List<DinhN> GetDinhNghiengCTs(Guid mact)
+        public List<QTNghieng> GetDinhNghiengCTs(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = from dh in dataContext.DinhNghiengs
@@ -288,7 +288,7 @@ namespace QuanTracCT.Service
                         from t in tam.DefaultIfEmpty()
                         join ct in dataContext.CongTrinhs on t.MaCT equals ct.MaCT
                         where ct.MaCT == mact
-                        select new DinhN
+                        select new QTNghieng
                         {
                             MaDinh = dh.MaDinh,
                             TenCK = t.TenCK,
@@ -326,7 +326,7 @@ namespace QuanTracCT.Service
             return query.FirstOrDefault();
         }
         //22.Số đỉnh nghiêng của công trình
-        public SumDinhN GetSumDinhNCT(Guid mact)
+        public SumQTN GetSumDinhNCT(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -335,7 +335,7 @@ namespace QuanTracCT.Service
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ct.MaCT == mact
                          group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK } into nhom
-                         select new SumDinhN
+                         select new SumQTN
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
@@ -347,14 +347,14 @@ namespace QuanTracCT.Service
         }
 
         //23.Số đỉnh nghiêng của chu kỳ
-        public SumDinhN GetSumDinhNCK(Guid mack)
+        public SumQTN GetSumDinhNCK(Guid mack)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = from dh in dataContext.DinhNghiengs
                         join ck in dataContext.ChuKys on dh.MaCK equals ck.MaCK
                         where ck.MaCK == mack
                         group ck by ck.MaCK into nhom
-                        select new SumDinhN
+                        select new SumQTN
                         {
                             MaCK = nhom.Key,
                             TenCK = nhom.Key,
@@ -371,7 +371,7 @@ namespace QuanTracCT.Service
             return query.ToList();
         }
         //25.Lấy danh sách cạnh nghiêng theo công trình
-        public List<CanhN> GetCanhNghiengCTs(Guid mact)
+        public List<QTNghieng> GetCanhNghiengCTs(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = from cn in dataContext.CanhNghiengs
@@ -379,7 +379,7 @@ namespace QuanTracCT.Service
                         from t in tam.DefaultIfEmpty()
                         join ct in dataContext.CongTrinhs on t.MaCT equals ct.MaCT
                         where ct.MaCT == mact
-                        select new CanhN
+                        select new QTNghieng
                         {
                             MaCanh = cn.MaCanh,
                             TenCK = t.TenCK,
@@ -400,7 +400,7 @@ namespace QuanTracCT.Service
             return query.FirstOrDefault();
         }
         //27.Tính tổng số cạnh nghiêng của công trình
-        public SumCanhN GetSumCanhNCT(Guid mact)
+        public SumQTN GetSumCanhNCT(Guid mact)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
@@ -409,7 +409,7 @@ namespace QuanTracCT.Service
                          join ct in dataContext.CongTrinhs on ck.MaCT equals ct.MaCT
                          where ct.MaCT == mact
                          group new { ck = t.MaCK, ct = ct.MaCT } by new { t.MaCK, ct.MaCT, ct.TenCT, ck.TenCK } into nhom
-                         select new SumCanhN
+                         select new SumQTN
                          {
                              TenCK = nhom.Key.TenCK,
                              TenCT = nhom.Key.TenCT,
@@ -420,14 +420,14 @@ namespace QuanTracCT.Service
             return query.FirstOrDefault();
         }
         //28.Tính tổng số cạnh nghiêng của chu kỳ
-        public SumCanhN GetSumCanhNCK(Guid mack)
+        public SumQTN GetSumCanhNCK(Guid mack)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = from cn in dataContext.CanhNghiengs
                         join ck in dataContext.ChuKys on cn.MaCK equals ck.MaCK
                         where ck.MaCK == mack
                         group ck by ck.MaCK into nhom
-                        select new SumCanhN
+                        select new SumQTN
                         {
                             MaCK = nhom.Key,
                             TenCK = nhom.Key,

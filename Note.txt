@@ -1,4 +1,6 @@
-file QuanTracCT chinh la file clone tu git xuong do
-muon add gi thi de file trong folder projects
-roi cd den file git clone
-roi add zo
+file QuanTracCT chinh la file clone tu git xuong do chi clone 1 lan
+muon add gi thi de file trong folder git cua down
+roi cd den file git clone , git add,git commit
+git status 
+git config user.name locnguyen //add locnguyen
+git config user.name // xem ten add duoc

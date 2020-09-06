@@ -4,13 +4,16 @@ using System.Text;
 
 namespace QuanTracCT.Service.DTO
 {
-    public class MocN
+    public class QTLun
     {
-        public Guid MaMocN { get; internal set; }
+        public Guid MaTD { get; internal set; }
+        public string TenTuyen { get; internal set; }
         public string TenCK { get; internal set; }
-        public string TenMocN { get; internal set; }
         public Guid MaCK { get; internal set; }
         public Guid MaCT { get; internal set; }
         public string TenCT { get; internal set; }
+        public Guid MaMoc { get; internal set; }
+        public string TenMoc { get; internal set; }
+       
     }
 }
