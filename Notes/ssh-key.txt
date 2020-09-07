@@ -1,0 +1,6 @@
+ssh-keygen -t rsa -b 4096 -C "iot.loc.nguyen@gmail.com" -f locnguyen
+
+eval $(ssh-agent -s)
+ssh-add locnguyen
+
+enter password
