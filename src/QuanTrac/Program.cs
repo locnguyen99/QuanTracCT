@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanTracCT.Entity;
 using QuanTracCT.Service;
 using System;
@@ -110,6 +111,19 @@ namespace HocLai
             //var sumcanhnct = tracNghieng.GetSumCanhNCT(new Guid(mact));
             //var sumcanhnck = tracNghieng.GetSumCanhNCK(new Guid(mack));
 
+
+            //var query = new MoDauQueries();
+            //var moc = query.AddMoc();
+
+
+
+
+            var moctable = dataContext.Mocs;
+            var moc = moctable.FirstOrDefault(m => m.MaMoc == new Guid("D12E8E01-D5B3-43DD-9703-BBEBFDB2C65F"));
+            moc.TenMoc = "M222";
+            dataContext.Entry<Moc>(moc).State = EntityState.Modified;
+            dataContext.Mocs.Update(moc);
+            dataContext.SaveChanges();
 
             Console.WriteLine("Hello World!");
         }

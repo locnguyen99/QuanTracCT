@@ -9,6 +9,7 @@ namespace QuanTracCT.Entity
     public class Moc
     {
         [Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("TenMoc")]
         public string TenMoc { get; set; }
 
@@ -64,6 +65,7 @@ namespace QuanTracCT.Entity
         [Column("LoaiMoc")]
         public string LoaiMoc { get; set; }
 
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("MaMoc")]
         public Guid MaMoc { get; set; }
 

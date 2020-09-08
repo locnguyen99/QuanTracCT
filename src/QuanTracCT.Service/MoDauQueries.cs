@@ -265,5 +265,39 @@ namespace QuanTracCT.Service
                          });
             return query.FirstOrDefault();
         }
+
+            //19.Them moc vao ban moc
+        //public Moc AddMoc()
+        //{
+        //    var dataContext = new QuanTracLunCTContext();
+        //    var moc = new Moc();
+        //    moc.TenMoc = "M223";
+        //    moc.MaCK = new Guid("7A78D299-34B7-4CA9-AC05-42EDD74B5CAC");
+        //    dataContext.Mocs.Add(moc);
+        //    dataContext.SaveChanges();
+        //    return moc;
+        //}
+        //public Moc UpdateMoc()
+        //{
+        //    var dataContext = new QuanTracLunCTContext();
+        //    var moctable = dataContext.Mocs;
+        //    var moc = moctable.FirstOrDefault(m => m.MaMoc == new Guid("D12E8E01-D5B3-43DD-9703-BBEBFDB2C65F"));
+        //    moc.TenMoc = "M222";
+        //    dataContext.Entry<Moc>(moc).State = EntityState.Modified;
+        //    context.Products.Update(entity)
+        //    dataContext.SaveChanges();
+        //    return moc;
+        //}
+
+        //public Moc UpdateMoc()
+        //{
+        //    var dataContext = new QuanTracLunCTContext();
+        //    var moc = (from m in dataContext.Mocs
+        //               where m.TenMoc == "M223"
+        //               select m).First();
+        //    moc.TenMoc = "M222";
+        //    dataContext.SaveChanges();
+        //    return moc;
+        //}
     }
 }
