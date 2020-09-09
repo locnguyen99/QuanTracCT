@@ -124,7 +124,8 @@ namespace HocLai
             dataContext.Entry<Moc>(moc).State = EntityState.Modified;
             dataContext.Mocs.Update(moc);
             dataContext.SaveChanges();
-            wafawfwafwafwafwf
+
+
             Console.WriteLine("Hello World!");
         }
     }
