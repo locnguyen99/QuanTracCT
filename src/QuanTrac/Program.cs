@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanTracCT.Entity;
+=======
+﻿using QuanTracCT.Entity;
+>>>>>>> d998f3fe6b4fd38b1341ba2bee0efba2250294ff
 using QuanTracCT.Service;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -111,6 +116,14 @@ namespace HocLai
             //var sumcanhnct = tracNghieng.GetSumCanhNCT(new Guid(mact));
             //var sumcanhnck = tracNghieng.GetSumCanhNCK(new Guid(mack));
 
+            var a = dataContext.Mocs.ToList();
+            var a1 = dataContext.MocNghiengs.ToList();
+            var a2= dataContext.CongTrinhs.ToList();
+            var a3 = dataContext.CanhNghiengs.ToList();
+            var a4 = dataContext.DinhNghiengs.ToList();
+            var a5 = dataContext.ChuKys.ToList();
+            var a6 = dataContext.DiemNghiengs.ToList();
+            var a7 = dataContext.TuyenDos.ToList();
 
             //var query = new MoDauQueries();
             //var moc = query.AddMoc();
