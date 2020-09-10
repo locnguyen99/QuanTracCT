@@ -17,7 +17,8 @@ namespace QuanTracCT.Entity
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=localhost;Database=QuanTracLunCT;Trusted_Connection=True;";
+            var connectionString =@"Server=DESKTOP-GN0O6IE\SQL2019;Database=QuanTracLunCT;User Id=sa; Password=23456789;";
+
             optionsBuilder
              .UseSqlServer(connectionString, providerOptions => providerOptions.CommandTimeout(60))
              .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);

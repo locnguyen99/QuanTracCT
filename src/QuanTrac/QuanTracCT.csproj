@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QuanTracCT.Entity\QuanTracCT.Entity.csproj" />
     <ProjectReference Include="..\QuanTracCT.Service\QuanTracCT.Service.csproj" />
   </ItemGroup>
 
