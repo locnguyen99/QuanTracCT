@@ -81,7 +81,7 @@ namespace QuanTracCT.Service
                              TenCT = nhom.Key.TenCT,
                              MaCK = nhom.Key.MaCK,
                              MaCT = nhom.Key.MaCT,
-                             SoMocCSCT = nhom.Sum(gSelect => gSelect.KhoangCach)
+                             TongKCTDCSCT = nhom.Sum(gSelect => gSelect.KhoangCach)
                          });
             return query.FirstOrDefault();
         }
@@ -103,7 +103,7 @@ namespace QuanTracCT.Service
                              TenCT = nhom.Key.TenCT,
                              MaCK = nhom.Key.MaCK,
                              MaCT = nhom.Key.MaCT,
-                             SoMocCSCT = nhom.Sum(gSelect => gSelect.SoMayTram)
+                             TongTMTDCSCT = nhom.Sum(gSelect => gSelect.SoMayTram)
                          });
             return query.FirstOrDefault();
         }
@@ -125,7 +125,7 @@ namespace QuanTracCT.Service
                              TenCT = nhom.Key.TenCT,
                              MaCK = nhom.Key.MaCK,
                              MaCT = nhom.Key.MaCT,
-                             SoMocCSCT = nhom.Sum(gSelect => gSelect.ChenhCao)
+                             TongCCTDCSCT = nhom.Sum(gSelect => gSelect.ChenhCao)
                          });
             return query.FirstOrDefault();
         }
@@ -153,14 +153,14 @@ namespace QuanTracCT.Service
         }
 
         //10.Tổng số mốc cơ sở chu kỳ
-        public SumQTL GetSumMocCSCK(Guid mact,string loaimoc)
+        public SumQTL GetSumMocCSCK(Guid mack,string loaimoc)
         {
             var dataContext = new QuanTracLunCTContext();
             var query = (from ck in dataContext.ChuKys
                          join m in dataContext.Mocs on ck.MaCK equals m.MaCK into tam
                          from t in tam.DefaultIfEmpty()
-                         where t.MaCK == mact && t.LoaiMoc ==loaimoc
-                         group new { ck } by new { t.MaCK, ck.TenCK } into nhom
+                         where t.MaCK == mack && t.LoaiMoc ==loaimoc
+                         group new { ck } by new { t.MaCK, ck.TenCK, } into nhom
                          select new SumQTL
                          {
                              MaCK = nhom.Key,

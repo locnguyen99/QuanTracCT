@@ -25,7 +25,7 @@ namespace QuanTracCT.Api.Controllers
        [HttpGet("CongTrinh")]
         public CongTrinh GetCongTrinh(Guid mact)
         {
-            var services = new MoDauQueries();
+            var services = new MoDauQueries(); 
             var congtrinh = services.GetCongTrinh(mact);
             return congtrinh;
         }

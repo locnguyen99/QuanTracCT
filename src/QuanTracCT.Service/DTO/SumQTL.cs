@@ -30,5 +30,8 @@ namespace QuanTracCT.Service.DTO
         public int SumKCTDCT { get; internal set; }
         public string TenTuyen { get; internal set; }
         public double KhoangCanh { get; internal set; }
+        public double TongKCTDCSCT { get; internal set; }
+        public int TongTMTDCSCT { get; internal set; }
+        public double TongCCTDCSCT { get; internal set; }
     }
 }

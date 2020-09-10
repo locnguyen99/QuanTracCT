@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanTracCT.Entity;
-=======
-﻿using QuanTracCT.Entity;
->>>>>>> d998f3fe6b4fd38b1341ba2bee0efba2250294ff
+//﻿using QuanTracCT.Entity;
 using QuanTracCT.Service;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+//using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -46,21 +43,21 @@ namespace HocLai
             //var sumtuyenct = moDau.GetSumTuyenCT(new Guid(mact));
 
 
-            //var mocCS = new LuoiCoSoQueries();
-            //var moccss = mocCS.GetMocCSs("MocCS");
-            //var tuyendocss = mocCS.GetTuyenDoCSs("MocCS");
-            //var mack = "CE5288DB-0000-42DA-ABDB-9801D86DCA26";
-            //var sumkctdcs = mocCS.GetSumKCTDCS(new Guid(mack), "MocCS");
-            //var sumtmtdcs = mocCS.GetSumTMTDCS(new Guid(mack), "MocCS");
-            //var sumcctdcs = mocCS.GetSumCCTDCS(new Guid(mack), "MocCS");
-            //var mact = "F155E5BE-9364-4614-A106-B4D2CB8E8444";
-            //var sumkctdcsct = mocCS.GetSumKCTDCSCT(new Guid(mact), "MocCS", new Guid(mack));
-            //var sumtmtdcsct = mocCS.GetSumTMTDCSCT(new Guid(mact), "MocCS", new Guid(mack));
-            //var sumcctdcsct = mocCS.GetSumCCTDCSCT(new Guid(mact), "MocCS", new Guid(mack));
-            //var summoccsct = mocCS.GetSumMocCSCT(new Guid(mact), "MocCS");
-            //var summoccsck = mocCS.GetSumMocCSCK(new Guid(mack), "MocCS");
-            //var sumtuyencsct = mocCS.GetSumTuyenCSCT(new Guid(mact), "MocCS");
-            //var sumtuyencsck = mocCS.GetSumTuyenCSCK(new Guid(mack), "MocCS");
+            var mocCS = new LuoiCoSoQueries();
+            var moccss = mocCS.GetMocCSs("MocCS");
+            var tuyendocss = mocCS.GetTuyenDoCSs("MocCS");
+            var mack = "CE5288DB-0000-42DA-ABDB-9801D86DCA26";
+            var sumkctdcs = mocCS.GetSumKCTDCS(new Guid(mack), "MocCS");
+            var sumtmtdcs = mocCS.GetSumTMTDCS(new Guid(mack), "MocCS");
+            var sumcctdcs = mocCS.GetSumCCTDCS(new Guid(mack), "MocCS");
+            var mact = "F155E5BE-9364-4614-A106-B4D2CB8E8444";
+            var sumkctdcsct = mocCS.GetSumKCTDCSCT(new Guid(mact), "MocCS", new Guid(mack));
+            var sumtmtdcsct = mocCS.GetSumTMTDCSCT(new Guid(mact), "MocCS", new Guid(mack));
+            var sumcctdcsct = mocCS.GetSumCCTDCSCT(new Guid(mact), "MocCS", new Guid(mack));
+            var summoccsct = mocCS.GetSumMocCSCT(new Guid(mact), "MocCS");
+            var summoccsck = mocCS.GetSumMocCSCK(new Guid(mack), "MocCS");
+            var sumtuyencsct = mocCS.GetSumTuyenCSCT(new Guid(mact), "MocCS");
+            var sumtuyencsck = mocCS.GetSumTuyenCSCK(new Guid(mack), "MocCS");
 
 
             //var mocQT = new LuoiQuanTracQueries();
@@ -116,14 +113,14 @@ namespace HocLai
             //var sumcanhnct = tracNghieng.GetSumCanhNCT(new Guid(mact));
             //var sumcanhnck = tracNghieng.GetSumCanhNCK(new Guid(mack));
 
-            var a = dataContext.Mocs.ToList();
-            var a1 = dataContext.MocNghiengs.ToList();
-            var a2= dataContext.CongTrinhs.ToList();
-            var a3 = dataContext.CanhNghiengs.ToList();
-            var a4 = dataContext.DinhNghiengs.ToList();
-            var a5 = dataContext.ChuKys.ToList();
-            var a6 = dataContext.DiemNghiengs.ToList();
-            var a7 = dataContext.TuyenDos.ToList();
+            //var a = dataContext.Mocs.ToList();
+            //var a1 = dataContext.MocNghiengs.ToList();
+            //var a2= dataContext.CongTrinhs.ToList();
+            //var a3 = dataContext.CanhNghiengs.ToList();
+            //var a4 = dataContext.DinhNghiengs.ToList();
+            //var a5 = dataContext.ChuKys.ToList();
+            //var a6 = dataContext.DiemNghiengs.ToList();
+            //var a7 = dataContext.TuyenDos.ToList();
 
             //var query = new MoDauQueries();
             //var moc = query.AddMoc();
@@ -131,12 +128,19 @@ namespace HocLai
 
 
 
-            var moctable = dataContext.Mocs;
-            var moc = moctable.FirstOrDefault(m => m.MaMoc == new Guid("D12E8E01-D5B3-43DD-9703-BBEBFDB2C65F"));
-            moc.TenMoc = "M222";
-            dataContext.Entry<Moc>(moc).State = EntityState.Modified;
-            dataContext.Mocs.Update(moc);
-            dataContext.SaveChanges();
+            //var moctable = dataContext.Mocs;
+            //var moc = moctable.FirstOrDefault(m => m.MaMoc == new Guid("D12E8E01-D5B3-43DD-9703-BBEBFDB2C65F"));
+            //moc.TenMoc = "M222";
+            //dataContext.Entry<Moc>(moc).State = EntityState.Modified;
+            //dataContext.Mocs.Update(moc);
+            //dataContext.SaveChanges();
+
+            //using (var dataContext = new QuanTracLunCTContext())
+            //{
+            //    var moc = dataContext.Mocs.First(m => m.MaMoc == new Guid("D12E8E01-D5B3-43DD-9703-BBEBFDB2C65F"));
+            //    moc.TenMoc = "M44";
+            //    dataContext.SaveChanges();
+            //}
 
 
             Console.WriteLine("Hello World!");
