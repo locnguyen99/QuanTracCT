@@ -114,22 +114,74 @@ namespace HocLai
             //var sumcanhnck = tracNghieng.GetSumCanhNCK(new Guid(mack));
 
 
-            //var moctable = dataContext.Mocs;
-            //var moc = moctable.FirstOrDefault(m => m.MaMoc == new Guid("D12E8E01-D5B3-43DD-9703-BBEBFDB2C65F"));
-            //moc.TenMoc = "M222";
-            //dataContext.Entry<Moc>(moc).State = EntityState.Modified;
-            //dataContext.Mocs.Update(moc);
-            //dataContext.SaveChanges();
 
-            //using (var dataContext = new QuanTracLunCTContext())
-            //{
-            //    var moc = dataContext.Mocs.First(m => m.MaMoc == new Guid("D12E8E01-D5B3-43DD-9703-BBEBFDB2C65F"));
-            //    moc.TenMoc = "M44";
-            //    dataContext.SaveChanges();
-            //}
+
+
+             var moc = dataContext.Tests.First(m=>m.TenMoc== "555-555-5555");
+             moc.TenMoc = "M44";
+             dataContext.Entry(moc).State = EntityState.Modified;
+             dataContext.SaveChanges();
+            
 
 
             Console.WriteLine("Hello World!");
+
+            //UpdateTest();
         }
+
+        //public static void UpdateTest()                 Update && write exception..............
+        //{
+        //    using (var context = new QuanTracLunCTContext())
+        //    {
+        //        // Fetch a person from database and change phone number
+        //        var person = context.Tests.Single(p => p.TenMoc =="M2222") ;
+        //        person.TenMoc= "555-555-5555";
+        //        context.Entry(person).State = EntityState.Modified;
+
+        //        // Change the person's name in the database to simulate a concurrency conflict
+        //        //context.Database.ExecuteSqlRaw(
+        //        //    "UPDATE dbo.People SET FirstName = 'Jane' WHERE PersonId = 1");
+
+        //        var saved = false;
+        //        while (!saved)
+        //        {
+        //            try
+        //            {
+        //                // Attempt to save changes to the database
+        //                context.SaveChanges();
+        //                saved = true;
+        //            }
+        //            catch (DbUpdateConcurrencyException ex)
+        //            {
+        //                foreach (var entry in ex.Entries)
+        //                {
+        //                    if (entry.Entity is Test)
+        //                    {
+        //                        var proposedValues = entry.CurrentValues;
+        //                        var databaseValues = entry.GetDatabaseValues();
+
+        //                        foreach (var property in proposedValues.Properties)
+        //                        {
+        //                            var proposedValue = proposedValues[property];
+        //                            var databaseValue = databaseValues[property];
+
+        //                            // TODO: decide which value should be written to database
+        //                            // proposedValues[property] = <value to be saved>;
+        //                        }
+
+        //                        // Refresh original values to bypass next concurrency check
+        //                        entry.OriginalValues.SetValues(databaseValues);
+        //                    }
+        //                    else
+        //                    {
+        //                        throw new NotSupportedException(
+        //                            "Don't know how to handle concurrency conflicts for "
+        //                            + entry.Metadata.Name);
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

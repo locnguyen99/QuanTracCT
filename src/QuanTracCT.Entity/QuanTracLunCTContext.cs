@@ -8,6 +8,7 @@ namespace QuanTracCT.Entity
         public DbSet<CongTrinh> CongTrinhs { get; set; }
         public DbSet<ChuKy> ChuKys { get; set; }
         public DbSet<Moc> Mocs{ get; set; }
+        public DbSet<Test> Tests { get; set; }
         public DbSet<TuyenDo> TuyenDos { get; set; }
         public DbSet<MocNghieng> MocNghiengs { get; set; }
         public DbSet<DiemNghieng> DiemNghiengs { get; set; }
