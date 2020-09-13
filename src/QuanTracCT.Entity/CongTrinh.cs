@@ -8,6 +8,7 @@ namespace QuanTracCT.Entity
     [Table("CongTrinh")]
     public class CongTrinh 
     {
+        [ConcurrencyCheck]  // truong hop 2 nguoi cung update mot property
         [Key]
         [Column("MaCT")]
         public Guid MaCT { get; set; }

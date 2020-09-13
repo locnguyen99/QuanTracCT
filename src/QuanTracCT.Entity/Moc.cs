@@ -64,7 +64,8 @@ namespace QuanTracCT.Entity
         [Column("LoaiMoc")]
         public string LoaiMoc { get; set; }
 
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [ConcurrencyCheck]
         [Key]
         [Column("MaMoc")]
         public Guid MaMoc { get; set; }

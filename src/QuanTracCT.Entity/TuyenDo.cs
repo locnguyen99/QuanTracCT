@@ -7,7 +7,6 @@ namespace QuanTracCT.Entity
     [Table("TuyenDo")]
     public class TuyenDo
     {
-        [Key]
         [Column("TenTuyen")]
         public string TenTuyen { get; set; }
 
@@ -45,6 +44,7 @@ namespace QuanTracCT.Entity
         [Column("SHC")]
         public double? SHC { get; set; }
 
+        [Key]
         [Column("MaTD")]
         public  Guid MaTD { get; set; }
 
