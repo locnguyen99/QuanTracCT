@@ -9,7 +9,6 @@ namespace QuanTracCT.Entity
     [Table("MocNghieng")]
     public class MocNghieng
     {
-        [Key]
         [Column("STT")]
         public int STT { get; set; }
 
@@ -50,6 +49,7 @@ namespace QuanTracCT.Entity
         [Column("Delta_Y")]
         public double? Delta_Y { get; set; }
 
+        [Key]
         [Column("MaMocN")]
         public Guid MaMocN { get; set; }
         public ChuKy ChuKy { get; set; }
