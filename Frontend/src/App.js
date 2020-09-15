@@ -1,24 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
+import {Layout, Button} from 'antd';
 import './App.css';
 
+const {Header}=Layout;
+ 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello world!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Layout>
+        <Header className='header'>
+          <h1>Wellcome Ant!</h1>
+        </Header>
+      </Layout>
+      <div className="jumbotron">
+        <h1>Wellcome Bootstrap
+          <p>Chuc ban may man lan sau ...</p>
+        </h1>
+        <button>Click here</button>
+      </div>
     </div>
   );
 }
