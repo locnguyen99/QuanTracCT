@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FilterableProductTable from './Components/FilterableProductTable';
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        <FilterableProductTable></FilterableProductTable>
       </header>
     </div>
   );
