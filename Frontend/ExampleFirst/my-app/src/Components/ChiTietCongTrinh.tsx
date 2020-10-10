@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { CongTrinhProps, ListCT } from './CongTrinh';
 
 type IState = {
