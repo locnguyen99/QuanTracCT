@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Layout, Menu } from 'antd';
 import {
     DesktopOutlined,
@@ -9,7 +10,7 @@ import {
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 export default class AppMenu extends React.Component {

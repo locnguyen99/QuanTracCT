@@ -47,7 +47,6 @@ export default class CongTrinh extends React.Component {
             </table>
 
         );
-
     }
 }
 
@@ -117,7 +116,7 @@ const EditableCell: React.FC<EditableCellProps> = ({
     );
 };
 
-const EditableTable = () => {
+export const EditableTable = () => {
     const [form] = Form.useForm();
     const [data, setData] = useState(originData);
     const [editingKey, setEditingKey] = useState('');
