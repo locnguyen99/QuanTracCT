@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Table } from "antd";
+import { Link } from "react-router-dom";
 
 export default class Home extends React.Component {
     render() {
@@ -8,11 +9,14 @@ export default class Home extends React.Component {
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
                 Bill is a cat.
                 <div>
-                    <Table 
-                        columns={columns} 
-                        dataSource={data} 
-                        scroll={{ x: 1500, y: 300 }} 
+                    <Table
+                        columns={columns}
+                        dataSource={data}
+                        scroll={{ x: 1500, y: 300 }}
                     />
+                </div>
+                <div>
+                    <Link to="/Login">Login</Link>
                 </div>
             </div>
         )

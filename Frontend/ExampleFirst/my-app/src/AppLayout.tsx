@@ -20,7 +20,6 @@ export default class AppLayout extends React.Component {
         console.log(collapsed);
         this.setState({ collapsed });
     };
-
     render() {
         return (
             <Layout style={{ minHeight: '100vh' }}>

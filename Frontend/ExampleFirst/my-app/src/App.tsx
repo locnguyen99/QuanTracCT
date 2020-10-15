@@ -5,25 +5,28 @@ import 'antd/dist/antd.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AppLayout from './AppLayout';
 import ChiTietCongTrinh from './Components/ChiTietCongTrinh';
-import CongTrinh, { EditableTable } from './Components/CongTrinh';
+import CongTrinh from './Components/CongTrinh';
 import Home from './Components/Home';
 import { LayoutLogin } from './LayoutLogin';
 import { Login } from './Login';
+import { EditableTable } from './Components/EditableTable';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route>
-          <AppLayout>
-            <Route path="/" exact component={Home} />
-            <Route path="/cong-trinh" exact component={CongTrinh} />
-            <Route path="/cong-trinh/:MaCT" component={ChiTietCongTrinh} />
-            <Route path="/cong-trinh" exact component={EditableTable} />
-          </AppLayout>
+        <Route exact path="/Login">
           <LayoutLogin>
-            <Route path="/Login" exact component={Login} />
+            <Route component={Login} />
           </LayoutLogin>
+        </Route>
+        <Route  >
+          <AppLayout>
+            <Route exact path="/" component={Home} />
+            <Route path="/cong-trinh" exact  component={CongTrinh} />
+            <Route path="/edit-cong-trinh" exact  component={EditableTable} />
+            <Route path="/cong-trinh/:MaCT" exact  component={ChiTietCongTrinh} />
+          </AppLayout>
         </Route>
       </Switch>
     </Router>

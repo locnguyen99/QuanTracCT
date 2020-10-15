@@ -22,7 +22,6 @@ export default class AppMenu extends React.Component {
         console.log(collapsed);
         this.setState({ collapsed });
     };
-
     render() {
         return (
             <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
@@ -35,6 +34,10 @@ export default class AppMenu extends React.Component {
                     <Menu.Item key="2" icon={<DesktopOutlined />}>
                         Công trình
                         <Link to="/cong-trinh" />
+                    </Menu.Item>
+                    <Menu.Item key="10" icon={<DesktopOutlined />}>
+                        Edit-CongTrinh
+                        <Link to="/edit-cong-trinh" />
                     </Menu.Item>
                     <SubMenu key="sub1" icon={<UserOutlined />} title="User">
                         <Menu.Item key="3">Tom</Menu.Item>
