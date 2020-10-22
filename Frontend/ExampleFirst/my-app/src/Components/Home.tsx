@@ -1,13 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { Table } from "antd";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Table } from 'antd';
+
+
 
 export default class Home extends React.Component {
     render() {
         return (
-            <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-                Bill is a cat.
+            <div className='site-layout-background' style={{ padding: 24, minHeight: 360 }}>
+                HOME PAGE
                 <div>
                     <Table
                         columns={columns}
@@ -16,7 +18,7 @@ export default class Home extends React.Component {
                     />
                 </div>
                 <div>
-                    <Link to="/Login">Login</Link>
+                    <Link to='/auth'>Login</Link>
                 </div>
             </div>
         )

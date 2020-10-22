@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class Moc extends React.Component<{
     MaMoc:string
     TenMoc:string

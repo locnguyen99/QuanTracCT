@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Breadcrumb } from 'antd';
 import AppMenu from './AppMenu';
 
 export interface CongTrinhProps {
@@ -15,7 +15,6 @@ export default class AppLayout extends React.Component {
     state = {
         collapsed: false,
     };
-
     onCollapse = (collapsed: any) => {
         console.log(collapsed);
         this.setState({ collapsed });
@@ -37,7 +36,6 @@ export default class AppLayout extends React.Component {
                 </Layout>
             </Layout>
         );
-
     }
 }
 
@@ -46,7 +44,6 @@ export const ListCT = [
     { TenCT: 'BBB', MaCT: '3b', DiaChi: 'TP' },
     { TenCT: 'CCC', MaCT: '3C', DiaChi: 'TB' }
 ]
-
 
 const data: any = [];
 for (let i = 0; i < 100; i++) {

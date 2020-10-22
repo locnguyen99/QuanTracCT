@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class TuyenDo extends React.Component<{
     TenTD:string
     MaTD:string
@@ -17,6 +18,7 @@ export default class TuyenDo extends React.Component<{
         )
     }
 }
+
 const ListTD=[
     {TenTD:"jfkajf",MaTD:"2425"},
     {TenTD:"jfkajfff",MaTD:"2f2425"}

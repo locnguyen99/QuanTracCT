@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
-import 'antd/dist/antd.css';
+
 
 export interface CongTrinhProps {
     TenCT: string
@@ -14,6 +14,7 @@ export default class CongTrinh extends React.Component {
     render() {
         return (
             <div>
+                CONG TRINH
                 <table>
                     <tr>
                         <th>Ma CT</th>
@@ -37,8 +38,9 @@ export default class CongTrinh extends React.Component {
                 </table>
                 <div>
                     <h1>co the them link to EditCT o day nhu phan chitiet</h1></div>
-                <h2><Button type="primary"><Link to={'/edit-cong-trinh'}>EditCT</Link></Button></h2>
+                <h2><Button type="primary"><Link to={'/cong-trinh-chi-tiet'}>EditCT</Link></Button></h2>
             </div>
+
         );
     }
 }
