@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './App.css';
 import { Layout, Menu } from 'antd'
 import { Link } from 'react-router-dom'
 import {
@@ -29,6 +30,7 @@ export default class AppMenu extends React.Component {
                 onCollapse={this.onCollapse}
             >
                 <div className='logo' />
+                <div className='menu'>
                 <Menu theme='dark' defaultSelectedKeys={['1']} mode='inline'>
                     <Menu.Item key='1'
                         icon={<PieChartOutlined />}
@@ -47,11 +49,29 @@ export default class AppMenu extends React.Component {
                     <Menu.Item key='10'
                         icon={<DesktopOutlined />}
                     >
-                        Edit-CongTrinh
+                        Kết quả quan trắc
+                        <Link to='/cong-trinh-chi-tiet' />
+                    </Menu.Item>
+                    <Menu.Item key='11'
+                        icon={<DesktopOutlined />}
+                    >
+                        Báo cáo
                         <Link to='/cong-trinh-chi-tiet' />
                     </Menu.Item>
 
-                    <SubMenu key='sub1'
+                    <Menu.Item key='12'
+                        icon={<DesktopOutlined />}
+                    >
+                        Cài đặt
+                    </Menu.Item>
+
+                    <Menu.Item key='13'
+                        icon={<DesktopOutlined />}
+                    >
+                        Hổ trợ & tư vấn 
+                    </Menu.Item>
+
+                    {/* <SubMenu key='sub1'
                         icon={<UserOutlined />}
                         title='User'
                     >
@@ -66,8 +86,10 @@ export default class AppMenu extends React.Component {
                         <Menu.Item key='6'>Team 1</Menu.Item>
                         <Menu.Item key='8'>Team 2</Menu.Item>
                     </SubMenu>
-                    <Menu.Item key='9' icon={<FileOutlined />} />
+                    <Menu.Item key='9' icon={<FileOutlined />} /> */}
                 </Menu>
+                </div>
+                
             </Sider>
         )
     }
