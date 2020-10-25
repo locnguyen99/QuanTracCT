@@ -68,9 +68,67 @@ tr:nth-child(even) {
 .login-form-button {
   width: 100%;
 }
-
 .editable-row .ant-form-item-explain {
   position: absolute;
   top: 100%;
   font-size: 12px;
 }
+
+.ant-layout-header  {
+  height: 70px !important;
+  position: absolute;
+  background-color: #fff !important;
+
+}
+.ant-layout-content {
+  margin-top: 120px !important;
+  background-color: #fff !important;
+
+}
+.ant-layout{
+  background-color: #fff !important;
+
+}
+.ant-layout-sider  {
+  background-color: white !important;
+  position: absolute;
+}
+.ant-layout-sider  {
+  background-color: white !important;
+}
+.backgroud {
+  background-color: white !important;
+}
+.undermenu {
+  margin-top: 360px;
+}
+.ant-btn {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149) !important;
+    transition: box-shadow .08s linear,min-width .15s cubic-bezier(0.4,0.0,0.2,1) !important;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149)!important;
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Google Sans', Roboto,RobotoDraft,Helvetica,Arial,sans-serif !important;
+    font-size: .875rem !important;
+    letter-spacing: .25px !important;
+    align-items: center !important;
+    background-color: #fff !important;
+    background-image: none !important;
+    border-radius: 24px !important;
+    color: #3c4043 !important;
+    display: inline-flex !important;
+    font-weight: 500 !important;
+    height: 48px !important;
+    min-width: 56px !important;
+    overflow: hidden !important;
+    padding: 0 24px 0 0 !important;
+    text-transform: none !important;
+    border: none !important;
+    -webkit-user-drag: none !important;
+    margin-left: 20px;
+    margin-top: 70px !important;
+}
+.topmenu{
+  margin-top: 10px;
+}
+
+

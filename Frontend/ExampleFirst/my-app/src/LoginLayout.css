@@ -1,8 +1,8 @@
 .root {
-    position: fixed;
     display: block;
     margin-left: 350px;
     height: 500px;
+    width: 800px;
     margin-top: 130px;
     box-shadow: 0 4px 2px 0 rgba(0,0,0,0.14),
                 0 3px 2px -2px rgba(0,0,0,0.12),
@@ -43,6 +43,8 @@
     height: 500px;
     width: 400px;
     margin-left: 400px;
+    position: absolute;
+
 }
 .MuiOutlinedInput-input{
     margin: auto !important;
@@ -60,7 +62,32 @@
     color: darkcyan;
     word-spacing: 1px;
 }
-
-
-
+.char{
+    font-size: 10px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    width: 350px;
+    line-height: 1.75;
+    letter-spacing: 0.00938em;
+    margin-top: 460px;
+    margin-left: 420px;
+    color: white;
+    position: absolute;
+}
+.ava{
+    margin-top: 400px;
+    margin-left: 410px;
+    position: absolute;
+}
+.phuc{
+    font-size: 10px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    width: 350px;
+    line-height: 1.75;
+    letter-spacing: 0.00938em;
+    margin-top: 420px;
+    line-height: 5px;
+    margin-left: 465px;
+    color: white;
+    position: absolute;
+}
 

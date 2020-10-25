@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
 
+import './App.css';
 import { Layout, Breadcrumb } from 'antd';
 import AppMenu from './AppMenu';
 
@@ -22,29 +22,23 @@ export default class AppLayout extends React.Component {
     };
     render() {
         return (
-            <div>
-                <div>
-                </div>
-                <div>
-                    <Header className="site-layout-background" style={{ padding: 0 }} />
-                    <AppMenu />
-                </div>
-                <div>
-                    <Layout style={{ minHeight: '100vh' }}>
-                        <Layout className="site-layout">
-                            <Content style={{ margin: '0 16px' }}>
-                                <Breadcrumb style={{ margin: '16px 0' }}>
-                                    <Breadcrumb.Item>User</Breadcrumb.Item>
-                                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                                </Breadcrumb>
-                                {this.props.children}
-                            </Content>
-                            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-                        </Layout>
+            <div className='page1'>
+                <Layout style={{ minHeight: '100vh' }}>
+                    <Header className="site-layout-background " style={{ padding: 0 }} />    
+                    <Layout className="site-layout">
+                        <AppMenu />
+                        <Content style={{ margin: '0 16px' }}>
+                            <Breadcrumb style={{ margin: '16px 0' }}>
+                                <Breadcrumb.Item>User</Breadcrumb.Item>
+                                <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                            </Breadcrumb>
+                            {this.props.children}
+                        </Content>
                     </Layout>
-                </div>
-
+                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                </Layout>
             </div>
+
         );
     }
 }
