@@ -3,19 +3,15 @@ import React from 'react'
 import './App.css';
 import { Layout, Menu } from 'antd'
 import { Link } from 'react-router-dom'
-import {
-    DesktopOutlined,
-    PieChartOutlined,
-    FileOutlined,
-    TeamOutlined,
-    UserOutlined,
-    PlusOutlined,
-} from '@ant-design/icons'
-import { Button, Radio } from 'antd';
-import { DownloadOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
+import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
+import DataUsageIcon from '@material-ui/icons/DataUsage';
+import PrintIcon from '@material-ui/icons/Print';
+import SettingsIcon from '@material-ui/icons/Settings';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 const { Sider } = Layout
-const { SubMenu } = Menu
 export default class AppMenu extends React.Component {
     state = {
         collapsed: false,
@@ -26,49 +22,49 @@ export default class AppMenu extends React.Component {
     }
 
     render() {
-        const size: any = this.state;
         return (
-            <Sider collapsible
-                collapsed={this.state.collapsed}
-                onCollapse={this.onCollapse}
-            >
-                <div className='logo' />
-                <div className='menu'>
-                    <div className='menu'>
-                        <Button type="primary" shape="round" icon={<PlusOutlined />} size={size}>
-                            Tạo mới
+            <div>
+                <div >
+                    <Button type="primary" shape="round" icon={<AddCircleIcon />} >
+                        Tạo mới
                         </Button>
-                    </div>
-                    <div className='topmenu'>
-                        <Menu defaultSelectedKeys={['1']} mode='inline'>
-                            <Menu.Item key='1'
-                                icon={<PieChartOutlined />}
-                            >
-                                Trang chủ
+                </div>
+                <div>
+                    <Menu >
+                        <Menu.Item >
+                        <div className='aaaa'>
+                            <DataUsageIcon />
+                        </div>
+                        <div className='aaa'>
+                            <p className='a'>Công trình</p> 
+                            <p className='aa'>Công trình & chu kỳ</p>
+                        </div>
                             <Link to='/' />
-                            </Menu.Item>
+                        </Menu.Item>
 
-                            <Menu.Item key='2'
-                                icon={<DesktopOutlined />}
-                            >
-                                Công trình
+                        <Menu.Item >
+                        <div className='aaaa'>
+                             <DoneOutlineIcon />
+                        </div>
+                        <div className='aaa'>
+                            <p className='a'>Kết quả quan trắc</p> 
+                            <p className='aa'>Kết quả mốc theo từng chu kỳ</p>
+                        </div>
                             <Link to='/cong-trinh' />
-                            </Menu.Item>
+                        </Menu.Item>
 
-                            <Menu.Item key='10'
-                                icon={<DesktopOutlined />}
-                            >
-                                Kết quả quan trắc
+                        <Menu.Item >
+                        <div className='aaaa'>
+                            <PrintIcon />
+                        </div>
+                        <div className='aaa'>
+                            <p className='a'>Báo cáo</p> 
+                            <p className='aa'>Get insights into the big data</p>
+                        </div>
                             <Link to='/cong-trinh-chi-tiet' />
-                            </Menu.Item>
-                            <Menu.Item key='11'
-                                icon={<DesktopOutlined />}
-                            >
-                                Báo cáo
-                            <Link to='/cong-trinh-chi-tiet' />
-                            </Menu.Item>
+                        </Menu.Item>
 
-                            {/* <SubMenu key='sub1'
+                        {/* <SubMenu key='sub1'
                                 icon={<UserOutlined />}
                                 title='User'
                             >
@@ -84,25 +80,31 @@ export default class AppMenu extends React.Component {
                                 <Menu.Item key='8'>Team 2</Menu.Item>
                             </SubMenu>
                             <Menu.Item key='9' icon={<FileOutlined />} /> */}
-                        </Menu>
-                    </div>
-                    <div className='undermenu'>
-                        <Menu defaultSelectedKeys={['1']} mode='inline'>
-                            <Menu.Item key='12'
-                                icon={<DesktopOutlined />}
-                            >
-                                Cài đặt
+                    </Menu>
+
+                </div>
+                <div className='undermenu'>
+                    <Menu >
+                        <Menu.Item >
+                        <div className='aaaa'>
+                            <SettingsIcon />
+                        </div>
+                        <div className='aaa'>
+                            <p className='b'>Cài đặt</p> 
+                        </div>
                         </Menu.Item>
 
-                            <Menu.Item key='13'
-                                icon={<DesktopOutlined />}
-                            >
-                                Hổ trợ & tư vấn
+                        <Menu.Item >
+                        <div className='aaaa'>
+                            <HelpOutlineIcon />
+                        </div>
+                        <div className='aaa'>
+                            <p className='b'>Hổ trợ & tư vấn</p> 
+                        </div>
                         </Menu.Item>
-                        </Menu>
-                    </div>
+                    </Menu>
                 </div>
-            </Sider>
+            </div>
         )
     }
 }

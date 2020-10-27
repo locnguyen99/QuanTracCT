@@ -37,7 +37,7 @@ export default function SignUp() {
         <div >
             <div className='back'>
                 <ArrowLeftOutlined />
-                Back
+                <Link href="/auth" >Back</Link>
             </div>
             <div className='signup'>
                 <Typography component="h1" variant="h5">
