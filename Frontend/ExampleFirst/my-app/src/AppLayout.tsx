@@ -1,8 +1,9 @@
 import React from 'react';
 
 import './App.css';
-import { Layout, Breadcrumb } from 'antd';
+import { Layout, Breadcrumb, Button } from 'antd';
 import AppMenu from './AppMenu';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 export interface CongTrinhProps {
     TenCT: string
@@ -22,14 +23,25 @@ export default class AppLayout extends React.Component {
     };
     render() {
         return (
-
             
-                <Layout style={{ minHeight: '100vh' }}>
+                <Layout>
+
+                <div>
+                <div>
+                        <Button >
+                            <AddCircleIcon />
+                       </Button>
+                    </div>
+                    <div className='create'>
+                        Tạo mới
+                    </div>
+                </div>
+
                 <div className='sider'>
                     <AppMenu />
                 </div>
                     <div>
-                        <Header className="site-layout-background " style={{ padding: 0 }} />
+                        <Header className="site-layout-background " />
                     </div>
                     
                     <Layout className="site-layout">

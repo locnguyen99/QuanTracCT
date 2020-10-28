@@ -24,12 +24,8 @@ export default class AppMenu extends React.Component {
     render() {
         return (
             <div>
-                <div >
-                    <Button type="primary" shape="round" icon={<AddCircleIcon />} >
-                        Tạo mới
-                        </Button>
-                </div>
-                <div>
+                    
+                <div className='mixsider'>
                     <Menu >
                         <Menu.Item >
                         <div className='aaaa'>
