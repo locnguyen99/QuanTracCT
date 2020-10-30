@@ -23,40 +23,48 @@ export default class AppLayout extends React.Component {
     };
     render() {
         return (
-            
-                <Layout>
-
-                <div>
-                <div>
-                        <Button >
-                            <AddCircleIcon />
-                       </Button>
+            <Layout>
+                <div className='left'>
+                    <div className='buttop'>
+                        <div>
+                            <Button ></Button>
+                        </div>
+                        <div className='PG'>
+                            <b><i>PG</i></b>
+                        </div>
+                        <div className='SU'>
+                            <b><i>Survey</i></b>
+                        </div>
                     </div>
-                    <div className='create'>
-                        Tạo mới
+                    <div className='tao'>
+                        <div>
+                            <Button ><AddCircleIcon /></Button>
+                        </div>
+                        <div className='create'>
+                            Tạo mới
+                    </div>
+                    </div>
+
+                    <div className='sider'>
+                        <AppMenu />
                     </div>
                 </div>
-
-                <div className='sider'>
-                    <AppMenu />
+                <div className='header'>
+                    <header></header>
                 </div>
-                    <div>
-                        <Header className="site-layout-background " />
-                    </div>
-                    
-                    <Layout className="site-layout">
-                            <Content style={{ margin: '0 16px' }}>
-                                <Breadcrumb style={{ margin: '16px 0' }}>
-                                    <Breadcrumb.Item>User</Breadcrumb.Item>
-                                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                                </Breadcrumb>
-                                {this.props.children}
-                            </Content>
-                        </Layout>
-                    <div>
-                        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-                    </div>
+                <Layout className="site-layout">
+                    <Content style={{ margin: '0 16px' }}>
+                        <Breadcrumb style={{ margin: '16px 0' }}>
+                            <Breadcrumb.Item>User</Breadcrumb.Item>
+                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                        </Breadcrumb>
+                        {this.props.children}
+                    </Content>
                 </Layout>
+                <div>
+                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                </div>
+            </Layout>
 
         );
     }

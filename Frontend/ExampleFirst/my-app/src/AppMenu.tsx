@@ -25,7 +25,7 @@ export default class AppMenu extends React.Component {
         return (
             <div>
                     
-                <div className='mixsider'>
+                <div>
                     <Menu >
                         <Menu.Item >
                         <div className='aaaa'>
