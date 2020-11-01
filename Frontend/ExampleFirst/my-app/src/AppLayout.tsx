@@ -1,9 +1,10 @@
 import React from 'react';
-
 import './App.css';
 import { Layout, Breadcrumb, Button } from 'antd';
 import AppMenu from './AppMenu';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import './styles.less';
+
 
 export interface CongTrinhProps {
     TenCT: string
@@ -23,49 +24,54 @@ export default class AppLayout extends React.Component {
     };
     render() {
         return (
-            <Layout>
-                <div className='left'>
-                    <div className='buttop'>
+            <div>
+                <Layout>
+                    <div className='left'>
+                        <div className='buttop'>
+                            <div>
+                                <Button ></Button>
+                            </div>
+                            <div className='PG'>
+                                <b><i>PG</i></b>
+                            </div>
+                            <div className='SU'>
+                                <b><i>Survey</i></b>
+                            </div>
+                        </div>
+                        <div className='tao'>
+                            <div>
+                                <Button ><AddCircleIcon /></Button>
+                            </div>
+                            <div className='create'>
+                                Tạo mới
+                            </div>
+                        </div>
+                        <div className='sider'>
+                            <AppMenu />
+                        </div>
+                    </div>
+                    <div className='hea'>
                         <div>
-                            <Button ></Button>
+                            
                         </div>
-                        <div className='PG'>
-                            <b><i>PG</i></b>
-                        </div>
-                        <div className='SU'>
-                            <b><i>Survey</i></b>
-                        </div>
+                        <header>tertettttttttttttt</header>
                     </div>
-                    <div className='tao'>
-                        <div>
-                            <Button ><AddCircleIcon /></Button>
-                        </div>
-                        <div className='create'>
-                            Tạo mới
+                    {/* <div>
+                        <Layout>
+                            <Content>
+                                <Breadcrumb>
+                                    <Breadcrumb.Item>User</Breadcrumb.Item>
+                                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                                </Breadcrumb>
+                                {this.props.children}
+                            </Content>
+                        </Layout>
+                    </div> */}
+                    <div  className='foo'>
+                        <footer>wjfkwjfkjwfjwfw</footer>
                     </div>
-                    </div>
-
-                    <div className='sider'>
-                        <AppMenu />
-                    </div>
-                </div>
-                <div className='header'>
-                    <header></header>
-                </div>
-                <Layout className="site-layout">
-                    <Content style={{ margin: '0 16px' }}>
-                        <Breadcrumb style={{ margin: '16px 0' }}>
-                            <Breadcrumb.Item>User</Breadcrumb.Item>
-                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                        </Breadcrumb>
-                        {this.props.children}
-                    </Content>
                 </Layout>
-                <div>
-                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-                </div>
-            </Layout>
-
+            </div>
         );
     }
 }
@@ -85,3 +91,4 @@ for (let i = 0; i < 100; i++) {
         address: `London Park no. ${i}`,
     });
 }
+

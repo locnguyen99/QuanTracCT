@@ -75,14 +75,17 @@ tr:nth-child(even) {
 }
 
 .header{
-  height: 60px;margin-left: 100px;
+  height: 60px;
+  margin-left: 100px;
 }
-.left{
-  
-}
+
 .ant-layout-content {
   margin-top: 120px !important;
   background-color: #fff !important;
+  position: absolute;
+  height: 500px;
+  margin-top: 150px;
+  padding-top: 30px;
 
 }
 .ant-layout{
@@ -100,7 +103,12 @@ tr:nth-child(even) {
   background-color: white !important;
 }
 .undermenu {
-  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 0;
 }
 .ant-btn {
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149) !important;
@@ -121,7 +129,8 @@ tr:nth-child(even) {
   display: none ;
 }
 .ant-layout{
-  width: 400px;
+  width: 300px;
+  position: absolute;
 }
 .ant-menu-item {
   width: 250px !important;
@@ -149,9 +158,27 @@ tr:nth-child(even) {
 }
 .sider{
   width: 300px;
+  height: 400px;
+  display: block;
 }
 .but{
   margin-top: 200px;
+}
+.left{
+  width: 300px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  max-width: 256px!important;
+  min-width: 256px!important;
+  transition-duration: .15s;
+  transition-property: background-color,box-shadow;
+  transition-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+  margin-top: 0;
+  position: absolute;
+  min-height: 1px;
+  float: left;
 }
 .create {
   margin-left: 115px;
@@ -162,12 +189,14 @@ tr:nth-child(even) {
   margin-top: 10px;
 }
 .ant-menu {
-  margin-top: 180px !important;
+  margin-top: 80px !important;
   display: block !important;  
+  width: 270px !important;
 }
 .site-layout-background{
   width: 300px !important;
   margin-left: 400px !important;
+  height: 350px !important;
 }
 .buttop{
   box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149) !important;
@@ -193,4 +222,19 @@ tr:nth-child(even) {
   margin-top: 7px;
   font-weight: bold;
   color: coral;
+}
+.hea{
+  width: 800px;
+  margin-left: 300px;
+  height: 150px;
+  position: absolute;
+  background-color: khaki;
+}
+.foo {
+  width: 940px;
+  height: 50px;
+  margin-top: 600px;
+}
+.makeStyles-form-2{
+  margin-left: 100px;
 }
