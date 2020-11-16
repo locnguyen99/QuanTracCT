@@ -80,17 +80,17 @@ tr:nth-child(even) {
 }
 
 .ant-layout-content {
-  margin-top: 120px !important;
   background-color: #fff !important;
   position: absolute;
-  height: 500px;
-  margin-top: 150px;
-  padding-top: 30px;
-
+  margin-left: 300px;
 }
+.ND{
+  height: 500px;
+  width: 900px;
+}
+
 .ant-layout{
   background-color: #fff !important;
-
 }
 .ant-layout-sider  {
   background-color: white !important;
@@ -108,7 +108,7 @@ tr:nth-child(even) {
   height: 300px;
   overflow-x: hidden;
   overflow-y: hidden;
-  margin-top: 0;
+  margin-top: 367px;
 }
 .ant-btn {
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149) !important;
@@ -224,16 +224,16 @@ tr:nth-child(even) {
   color: coral;
 }
 .hea{
-  width: 800px;
+  width: 1540px;
   margin-left: 300px;
-  height: 150px;
-  position: absolute;
-  background-color: khaki;
+  height: 180px;
+  background: #f0f2f5;
 }
 .foo {
-  width: 940px;
-  height: 50px;
-  margin-top: 600px;
+  width: 1840px;
+  height: 60px;
+  margin-top: 737px;
+  background: #f0f2f5;
 }
 .makeStyles-form-2{
   margin-left: 100px;

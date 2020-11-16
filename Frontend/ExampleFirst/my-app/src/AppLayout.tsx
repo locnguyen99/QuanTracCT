@@ -52,11 +52,10 @@ export default class AppLayout extends React.Component {
                     </div>
                     <div className='hea'>
                         <div>
-                            
+                            <header>tertettttttttttttt</header>
                         </div>
-                        <header>tertettttttttttttt</header>
                     </div>
-                    {/* <div>
+                    <div className='ND'>
                         <Layout>
                             <Content>
                                 <Breadcrumb>
@@ -66,7 +65,7 @@ export default class AppLayout extends React.Component {
                                 {this.props.children}
                             </Content>
                         </Layout>
-                    </div> */}
+                    </div>
                     <div  className='foo'>
                         <footer>wjfkwjfkjwfjwfw</footer>
                     </div>
