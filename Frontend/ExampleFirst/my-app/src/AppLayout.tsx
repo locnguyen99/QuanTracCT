@@ -55,7 +55,7 @@ export default class AppLayout extends React.Component {
                             <header>tertettttttttttttt</header>
                         </div>
                     </div>
-                    <div className='ND'>
+                    <div>
                         <Layout>
                             <Content>
                                 <Breadcrumb>
