@@ -25,8 +25,11 @@ export default class AppLayout extends React.Component {
     render() {
         return (
             <div>
+                <div className='hea'>
+                    <header>tertettttttttttttt</header>
+                </div>
                 <Layout>
-                    <div className='left'>
+                    <div className='vuong'>
                         <div className='buttop'>
                             <div>
                                 <Button ></Button>
@@ -46,30 +49,28 @@ export default class AppLayout extends React.Component {
                                 Tạo mới
                             </div>
                         </div>
-                        <div className='sider'>
-                            <AppMenu />
-                        </div>
                     </div>
-                    <div className='hea'>
+                    <AppMenu />
+
+                    {/* <div>
                         <div>
-                            <header>tertettttttttttttt</header>
+                            <Layout>
+                                <Content>
+                                    <Breadcrumb>
+                                        <Breadcrumb.Item>User</Breadcrumb.Item>
+                                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                                    </Breadcrumb>
+                                </Content>
+                            </Layout>
                         </div>
-                    </div>
-                    <div>
-                        <Layout>
-                            <Content>
-                                <Breadcrumb>
-                                    <Breadcrumb.Item>User</Breadcrumb.Item>
-                                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                                </Breadcrumb>
-                                {this.props.children}
-                            </Content>
-                        </Layout>
-                    </div>
-                    <div  className='foo'>
-                        <footer>wjfkwjfkjwfjwfw</footer>
-                    </div>
+                        <div className='ND'>
+                            {this.props.children}
+                        </div>
+                    </div> */}
                 </Layout>
+                <div className='foo'>
+                    <footer>wjfkwjfkjwfjwfw</footer>
+                </div>
             </div>
         );
     }

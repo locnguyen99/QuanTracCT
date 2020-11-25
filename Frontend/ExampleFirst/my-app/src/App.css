@@ -74,23 +74,19 @@ tr:nth-child(even) {
   font-size: 12px;
 }
 
-.header{
-  height: 60px;
-  margin-left: 100px;
-}
-
 .ant-layout-content {
   background-color: #fff !important;
   position: absolute;
   margin-left: 300px;
 }
-.ND{
-  height: 500px;
-  width: 900px;
-}
 
 .ant-layout{
-  background-color: #fff !important;
+  background-color: transparent !important;
+  width: 270px !important;
+  flex-direction: column;
+  display: flex;
+  margin-top: 0;
+  float: left;
 }
 .ant-layout-sider  {
   background-color: white !important;
@@ -102,13 +98,9 @@ tr:nth-child(even) {
 .backgroud {
   background-color: white !important;
 }
-.undermenu {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  margin-top: 367px;
+.vuong{
+  height: 180px;
+  width: 270px;
 }
 .ant-btn {
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149) !important;
@@ -128,10 +120,7 @@ tr:nth-child(even) {
 .ant-layout-sider-zero-width-trigger {
   display: none ;
 }
-.ant-layout{
-  width: 300px;
-  position: absolute;
-}
+
 .ant-menu-item {
   width: 250px !important;
   height: 50px !important;
@@ -157,6 +146,7 @@ tr:nth-child(even) {
   margin-top: 8px;
 }
 .sider{
+  margin-top: 100px;
   width: 300px;
   height: 400px;
   display: block;
@@ -189,7 +179,6 @@ tr:nth-child(even) {
   margin-top: 10px;
 }
 .ant-menu {
-  margin-top: 80px !important;
   display: block !important;  
   width: 270px !important;
 }
@@ -223,18 +212,36 @@ tr:nth-child(even) {
   font-weight: bold;
   color: coral;
 }
-.hea{
-  width: 1540px;
-  margin-left: 300px;
-  height: 180px;
-  background: #f0f2f5;
-}
+
 .foo {
-  width: 1840px;
-  height: 60px;
-  margin-top: 750px;
-  background: #f0f2f5;
+  height: 100px;
+  margin-left: 300px;
 }
 .makeStyles-form-2{
   margin-left: 100px;
+}
+
+.ND{
+  width: 600px;
+  height: 600px;
+  align-items: center;
+  margin-left: 200px;
+}
+.topmenu{
+  width: 270px;
+  height: 500px;
+}
+.allmenu{
+  width: 270px;
+}
+.undermenu{
+  height: 150px;
+}
+.hea{
+  height: 185px;
+  float: left;
+  overflow: hidden;
+  width: 100%!important;
+  margin-left: 280px;
+  border-bottom: 1px solid #e5e5e5;
 }
