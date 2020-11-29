@@ -1,7 +1,6 @@
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,7 +11,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -98,24 +96,35 @@ tr:nth-child(even) {
 .backgroud {
   background-color: white !important;
 }
-.vuong{
-  height: 180px;
-  width: 270px;
-}
+
 .ant-btn {
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149) !important;
+    box-shadow: 0 1px 2px 0 rgba(66, 132, 182, 0.302), 0 1px 3px 1px rgba(89, 162, 218, 0.149) !important;
     background-color: #fff !important;
     border-radius: 24px !important;
-    color: #3c4043 !important;
-    height: 48px !important;
+    color:blue !important;
+    height: 43px !important;
     min-width: 56px !important;
-    padding: 5px 100px 0 0 !important;
+    padding: 5px 90px 0 0 !important;
     position: absolute !important;
-    width: 150px;
-    margin-left: 65px;
+    width: 135px;
 }
-.tao{
-  margin-top: 100px;
+.MuiSvgIcon-root{
+  font-size: 15px !important;
+}
+.create {
+  margin-left: 42px;
+  position: absolute;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  margin-top: 8.5px;
+  color: blue;
+}
+.added{
+  margin-left: 40px;
+  margin-top: 45px;
+  height: 70px;
+  width: 150px;
+  padding: 10px;
 }
 .ant-layout-sider-zero-width-trigger {
   display: none ;
@@ -126,34 +135,33 @@ tr:nth-child(even) {
   height: 50px !important;
 }
 .aaa{
-  position: absolute;
-  margin-left: 40px;
+  margin-left: 25px;
   line-height: 0.5px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 .a{
-  font-size: 18px;
+  font-size: 16px;
+  color: #282c34;
 }
 .aa{
-  font-size: 12px;
+  font-size: 10px;
 }
 .aaaa{
   position: absolute;
-  margin-top: 10px;
-}
-.b{
-  font-size: 18px;
   margin-top: 8px;
 }
+.b{
+  font-size: 16px;
+  color: #282c34;
+  padding-top: 5px;
+  margin-top: 15px !important;
+}
 .sider{
-  margin-top: 100px;
-  width: 300px;
-  height: 400px;
+  width: 270px;
+  height: auto;
   display: block;
 }
-.but{
-  margin-top: 200px;
-}
+
 .left{
   width: 300px;
   height: 700px;
@@ -170,14 +178,7 @@ tr:nth-child(even) {
   min-height: 1px;
   float: left;
 }
-.create {
-  margin-left: 115px;
-  position: absolute;
-  font-family: 'Google Sans', Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.25px;
-  margin-top: 10px;
-}
+
 .ant-menu {
   display: block !important;  
   width: 270px !important;
@@ -187,35 +188,45 @@ tr:nth-child(even) {
   margin-left: 400px !important;
   height: 350px !important;
 }
-.buttop{
+.butPG{
   box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149) !important;
   background-color: #fff !important;
   border-radius: 10px !important;
   color: #3c4043 !important;
-  height: 35px !important;
+  height: 28px !important;
   padding: 0 0 0 0 !important;
   position: absolute !important;
-  width: 37px !important;
-  margin-top: 10px;
-  margin-left: 10px;
+  width: 30px !important;
 }
 .PG{
-  margin-top: 7px;
-  margin-left: 8px;
+  margin-top: 2.5px;
+  margin-left: 5px;
   font-weight: bold;
   position: absolute;
-
+  color: blue;
+  letter-spacing: 1px;
 }
 .SU{
-  margin-left: 45px;
-  margin-top: 7px;
+  position: absolute;
+  margin-top: 3.5px;
+  margin-left: 36px;
   font-weight: bold;
-  color: coral;
+  color: dimgray;
+  letter-spacing: 1px;
+}
+.hea{
+  padding:9px;
+  height:45px !important;
+  width: 270px;
+  /* float: left; */
+  /* overflow: hidden; */
+  /* width: 100%!important; */
 }
 
 .foo {
-  height: 100px;
-  margin-left: 300px;
+  height: 50px;
+  width: 250px;
+  border-top: 1px solid #e5e5e5;
 }
 .makeStyles-form-2{
   margin-left: 100px;
@@ -229,19 +240,16 @@ tr:nth-child(even) {
 }
 .topmenu{
   width: 270px;
-  height: 500px;
+  height: 400px;
 }
 .allmenu{
   width: 270px;
+  height: 535px;
+  margin-top: 15px;
 }
 .undermenu{
-  height: 150px;
-}
-.hea{
-  height: 185px;
-  float: left;
-  overflow: hidden;
-  width: 100%!important;
-  margin-left: 280px;
-  border-bottom: 1px solid #e5e5e5;
+  margin-top: 15px;
+  width: 270px;
+  height: 100px;
+
 }
