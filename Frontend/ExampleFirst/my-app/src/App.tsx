@@ -59,3 +59,4 @@ class AuthNotFoundPage extends React.Component {
 }
 export default App
 //setInterval(App, 1000) goi ham or biểu thức chạy trong số giây quy định, sau đó dừng tiến trình khi hết giờ
+//https://css-tricks.com/snippets/css/a-guide-to-flexbox/

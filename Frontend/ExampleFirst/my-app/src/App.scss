@@ -22,20 +22,24 @@ $left-menu-width: 250px;
     width: $left-menu-width;
     height: 100%;
     background-color: red;
-
+    flex-direction: column;
     .header {
       background-color: hotpink;
+      height: 50px;
     }
     .button-new {
-
+      height: 150px;
     }
     .top-menu {
       background-color: greenyellow;
+      height: 350px;
     }
     .bottom-menu {
       background-color: yellow;
+      height: 120px;
     }
     .footer {
+      height: calc(100vh - 50px - 150px -350px -120px);
       background-color: burlywood;
     }
   }

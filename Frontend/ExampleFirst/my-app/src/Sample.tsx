@@ -6,7 +6,7 @@ export default class Sample extends React.Component {
 
             <div className='my-app'>
                 <div className='left-menu'>
-                    {/* <div className='header'>
+                    <div className='header'>
                         .my-app .left-menu .header
                     </div>
 
@@ -24,7 +24,7 @@ export default class Sample extends React.Component {
 
                     <div className='footer'>
                         .my-app .left-menu .headerfooter
-                     </div> */}
+                     </div>
                 </div>
 
                 <div className='main-content'>
