@@ -1,6 +1,5 @@
 import React from 'react'
 
-import './App.css'
 import 'antd/dist/antd.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { EditableTable } from './Components/EditableTable'
@@ -11,6 +10,7 @@ import CongTrinh from './Components/CongTrinh'
 import Home from './Components/Home'
 import Signin from './Signin'
 import Signup from './Signup'
+import Sample from './Sample'
 
 function App() {
 	return (
@@ -27,6 +27,7 @@ function App() {
 				</Route>
 
 				<Route path='/'>
+					<Sample />
 					<AppLayout>
 						<Switch>
 							<Route path='/' exact component={Home} />

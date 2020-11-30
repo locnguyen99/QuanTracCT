@@ -1,3 +1,60 @@
+$left-menu-width: 250px;
+
+.container-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .center {
+    align-content: center;
+  }
+}
+
+.my-app {
+  height: 100vh;
+  width:100%;
+  display: inline-block;
+  display: flex; /* or inline-flex */
+  
+  .left-menu {
+    display: inline-block;
+    width: $left-menu-width;
+    height: 100%;
+    background-color: red;
+
+    .header {
+      background-color: hotpink;
+    }
+    .button-new {
+
+    }
+    .top-menu {
+      background-color: greenyellow;
+    }
+    .bottom-menu {
+      background-color: yellow;
+    }
+    .footer {
+      background-color: burlywood;
+    }
+  }
+  .main-content {
+    display: inline-block;
+    background-color: yellow;
+    height: 100%;
+    width: calc(100% - 250px);
+    margin-left: 0;
+  }
+  .header {
+    background-color: blue;
+  }
+  .footer {
+    background-color: grey;
+  }
+}
+
+
 .App {
   text-align: center;
 }

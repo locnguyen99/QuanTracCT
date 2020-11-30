@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Layout, Breadcrumb, Button } from 'antd';
 import AppMenu from './AppMenu';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
@@ -24,7 +24,9 @@ export default class AppLayout extends React.Component {
     };
     render() {
         return (
+            
             <div>
+            
                 <div className='sider'>
                     <div className='hea'>
                         <div className='butPG'>
