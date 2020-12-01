@@ -1,9 +1,15 @@
 import React from 'react';
 import './App.scss';
 import { Layout, Breadcrumb, Button } from 'antd';
-import AppMenu from './AppMenu';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import './styles.less';
+import { Menu } from 'antd'
+import { Link } from 'react-router-dom'
+import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
+import DataUsageIcon from '@material-ui/icons/DataUsage';
+import PrintIcon from '@material-ui/icons/Print';
+import SettingsIcon from '@material-ui/icons/Settings';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 
 export interface CongTrinhProps {
@@ -13,7 +19,7 @@ export interface CongTrinhProps {
 }
 
 const { Header, Content, Footer } = Layout;
-
+const { Sider } = Layout
 export default class AppLayout extends React.Component {
     state = {
         collapsed: false,
@@ -22,66 +28,116 @@ export default class AppLayout extends React.Component {
         console.log(collapsed);
         this.setState({ collapsed });
     };
+
     render() {
         return (
-            
             <div>
-            
-                {/* <div className='sider'>
-                    <div className='hea'>
-                        <div className='butPG'>
-                            <Button ></Button>
-                        </div>
-                        <div className='PG'>
-                            <b><i>PG</i></b>
-                        </div>
-                        <div className='SU'>
-                            <b><i>Survey</i></b>
-                        </div>
-                    </div>
-                    <div className='added'>
-                        <div>
-                            <Button ><AddCircleIcon /></Button>
-                        </div>
-                        <div className='create'>
-                            Tạo mới
-                        </div>
-                    </div>
-                    <div>
-                        <AppMenu />
-                    </div>
-                    <div className='foo'>
-                        <footer>wjfkwjfkjwfjwfw</footer>
-                    </div>
-                </div> */}
-                {/* <div>
-                    <div>
-                        <h1>header</h1>
-                    </div>
-                    <div>
-                        <Layout>
-                            <div className='vuong'>
+                <div className='my-app'>
+                    <div className='left-menu'>
+                        <div className='top-left-menu'>
+                            <div className='top-logo'>
+                                <div className='butPG'>
+                                    <Button ></Button>
+                                </div>
+                                <div className='PG'>
+                                    <b><i>PG</i></b>
+                                </div>
+                                <div className='SU'>
+                                    <b><i>Survey</i></b>
+                                </div>
                             </div>
-                            <div>
+                            <div className='top-button'>
                                 <div>
-                                    <Layout>
-                                        <Content>
-                                            <Breadcrumb>
-                                                <Breadcrumb.Item>User</Breadcrumb.Item>
-                                                <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                                            </Breadcrumb>
-                                        </Content>
-                                    </Layout>
+                                    <Button ><AddCircleIcon /></Button>
                                 </div>
-                                <div className='ND'>
-                                    {this.props.children}
+                                <div className='create'>
+                                    Tạo mới
                                 </div>
                             </div>
-                        </Layout>
+                            <div className='menu'>
+                                <Menu >
+                                    <Menu.Item >
+                                        <div className='aaaa'>
+                                            <DataUsageIcon />
+                                        </div>
+                                        <div className='aaa'>
+                                            <p className='a menu-item'>Công trình</p>
+                                            <p className='aa'>Công trình & chu kỳ</p>
+                                        </div>
+                                        <Link to='/' />
+                                    </Menu.Item>
+                                    <Menu.Item >
+                                        <div className='aaaa'>
+                                            <DoneOutlineIcon />
+                                        </div>
+                                        <div className='aaa'>
+                                            <p className='a menu-item'>Kết quả quan trắc</p>
+                                            <p className='aa'>Kết quả mốc theo từng chu kỳ</p>
+                                        </div>
+                                        <Link to='/cong-trinh' />
+                                    </Menu.Item>
+                                    <Menu.Item >
+                                        <div className='aaaa'>
+                                            <PrintIcon />
+                                        </div>
+                                        <div className='aaa'>
+                                            <p className='a menu-item'>Báo cáo</p>
+                                            <p className='aa'>Get insights into the big data</p>
+                                        </div>
+                                        <Link to='/cong-trinh-chi-tiet' />
+                                    </Menu.Item>
+                                </Menu>
+                            </div>
+                        </div>
+                        <div className='bottom-left-menu'>
+                            <Menu >
+                                <Menu.Item >
+                                    <div className='aaaa'>
+                                        <SettingsIcon />
+                                    </div>
+                                    <div className='aaa'>
+                                        <p className='b footer'>Cài đặt</p>
+                                    </div>
+                                </Menu.Item>
+                                <Menu.Item >
+                                    <div className='aaaa'>
+                                        <HelpOutlineIcon />
+                                    </div>
+                                    <div className='aaa'>
+                                        <p className='b footer'>Hổ trợ & tư vấn</p>
+                                    </div>
+                                </Menu.Item>
+                            </Menu>
+
+                            <div className='footer'>
+                                footer
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h2>footer</h2>
+                    <div className='main-content'>
                     </div>
+                </div>
+
+                {/* <div>
+                    <Layout>
+                        <div className='vuong'>
+                        </div>
+                        <div>
+                            <div>
+                                <Layout>
+                                    <Content>
+                                        <Breadcrumb>
+                                            <Breadcrumb.Item>User</Breadcrumb.Item>
+                                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                                        </Breadcrumb>
+                                    </Content>
+                                </Layout>
+                            </div>
+                            <div className='ND'>
+                                {this.props.children}
+                            </div>
+                        </div>
+                    </Layout>
                 </div> */}
             </div>
         );
