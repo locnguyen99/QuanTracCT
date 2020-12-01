@@ -6,40 +6,73 @@ export default class Sample extends React.Component {
 
             <div className='my-app'>
                 <div className='left-menu'>
-                    <div className='header'>
-                        .my-app .left-menu .header
+                    <div className='top-left-menu'>
+                        <div className='top-logo'>
+                            PG Survey
+                        </div>
+                        <div className='top-button'>
+                            Tạo mới
+                        </div>
+                        <div className='menu'>
+                            <div className='menu-item'>
+                                Công trình
+                            </div>
+                            <div className='menu-item'>
+                                Kết quả quan trắc
+                            </div>
+                            <div className='menu-item'>
+                                Báo cáo
+                            </div>
+                        </div>
                     </div>
 
-                    <div className='button-new'>
-                        .my-app .left-menu .button-new
-                    </div>
-
-                    <div className='top-menu'>
-                        .my-app .left-menu .top-menu
-                     </div>
-
-                    <div className='bottom-menu'>
-                        .my-app .left-menu .bottom-menu
-                     </div>
-
-                    <div className='footer'>
-                        .my-app .left-menu .headerfooter
-                     </div>
+                    <div className='bottom-left-menu'>
+                        <div className='footer'>
+                            Cài đặt
+                        </div>
+                        <div className='footer'>
+                            Hỗ trợ & tư vấn
+                        </div>
+                        <div className='footer'>
+                            footer
+                        </div>
+                    </div>  
                 </div>
 
                 <div className='main-content'>
-                    {/* <div className='header'>
-        .main-content .header
-    </div>
-    <div className='top-menu'>
-    .main-content .top-menu
-    </div>
-    <div className='page-content'>
-    .main-content .page-content
-    </div>
-    <div className='footer'>
-    .main-content .footer
-    </div> */}
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div> 
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
+                    <div style={{height: 100, margin: 1}}>ddfdfd</div>
                 </div>
             </div>
         )

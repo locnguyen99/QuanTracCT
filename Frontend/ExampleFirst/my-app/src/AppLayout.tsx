@@ -27,7 +27,7 @@ export default class AppLayout extends React.Component {
             
             <div>
             
-                <div className='sider'>
+                {/* <div className='sider'>
                     <div className='hea'>
                         <div className='butPG'>
                             <Button ></Button>
@@ -53,7 +53,7 @@ export default class AppLayout extends React.Component {
                     <div className='foo'>
                         <footer>wjfkwjfkjwfjwfw</footer>
                     </div>
-                </div>
+                </div> */}
                 {/* <div>
                     <div>
                         <h1>header</h1>
