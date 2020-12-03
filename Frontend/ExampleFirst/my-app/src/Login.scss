@@ -1,0 +1,80 @@
+.ant-layout {
+    background-color: white !important;
+}
+.my-login {
+    display: flex;
+    overflow: hidden;
+    // border-radius: 8px; lam tron canh
+    border: 1px solid #dadce0;
+    margin: 0 auto;
+    margin-top: 125px;
+    width: 800px;
+    height: 500px !important;
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 2px -2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    .left-login {
+        display: inline-block;
+        height: 100%;
+        width: 400px;
+        background-color: white;
+        flex-direction: column;
+        .header-login {
+            height: 80px;
+            margin-top: 30px;
+            text-align: center;
+            .icon {
+                margin-left: 170px;
+            }
+        }
+        .main-login {
+            height: calc(100% - 80px);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 45px;
+            .top-main {
+                height: 180px;
+                overflow: auto;
+            }
+        }
+    }
+    .right-login {
+        display: inline-block;
+        width: calc(100% - 400px);
+        height: 100%;
+        background-color: white;
+        .img {
+            width: 400px;
+            height: 500px;
+            position: absolute;
+        }
+        .footer-login {
+            .avatar-login {
+                margin-top: 400px;
+                margin-left: 410px;
+                position: absolute;
+                .phuc {
+                    font-size: 10px;
+                    width: 350px;
+                    line-height: 1.75;
+                    margin-top: 420px;
+                    line-height: 5px;
+                    color: white;
+                    position: absolute;
+                }
+            }
+            .char-login {
+                font-size: 10px;
+                width: 350px;
+                color: white;
+                position: absolute;
+            }
+        }
+    }
+}
+.back {
+    margin-left: 30px;
+    margin-top: 10px;
+    position: absolute;
+    color: darkcyan;
+    word-spacing: 1px;
+}

@@ -11,7 +11,6 @@ import PrintIcon from '@material-ui/icons/Print';
 import SettingsIcon from '@material-ui/icons/Settings';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
-
 export interface CongTrinhProps {
     TenCT: string
     MaCT: string
@@ -48,7 +47,7 @@ export default class AppLayout extends React.Component {
                             </div>
                             <div className='top-button'>
                                 <div>
-                                    <Button ><AddCircleIcon /></Button>
+                                    <Button className='but'><AddCircleIcon /></Button>
                                 </div>
                                 <div className='create'>
                                     Tạo mới
@@ -60,8 +59,8 @@ export default class AppLayout extends React.Component {
                                         <div className='aaaa'>
                                             <DataUsageIcon />
                                         </div>
-                                        <div className='aaa'>
-                                            <p className='a menu-item'>Công trình</p>
+                                        <div className='aaa menu-item'>
+                                            <p className='a'>Công trình</p>
                                             <p className='aa'>Công trình & chu kỳ</p>
                                         </div>
                                         <Link to='/' />
@@ -70,8 +69,8 @@ export default class AppLayout extends React.Component {
                                         <div className='aaaa'>
                                             <DoneOutlineIcon />
                                         </div>
-                                        <div className='aaa'>
-                                            <p className='a menu-item'>Kết quả quan trắc</p>
+                                        <div className='aaa menu-item'>
+                                            <p className='a'>Kết quả quan trắc</p>
                                             <p className='aa'>Kết quả mốc theo từng chu kỳ</p>
                                         </div>
                                         <Link to='/cong-trinh' />
@@ -80,8 +79,8 @@ export default class AppLayout extends React.Component {
                                         <div className='aaaa'>
                                             <PrintIcon />
                                         </div>
-                                        <div className='aaa'>
-                                            <p className='a menu-item'>Báo cáo</p>
+                                        <div className='aaa menu-item'>
+                                            <p className='a'>Báo cáo</p>
                                             <p className='aa'>Get insights into the big data</p>
                                         </div>
                                         <Link to='/cong-trinh-chi-tiet' />
@@ -96,7 +95,7 @@ export default class AppLayout extends React.Component {
                                         <SettingsIcon />
                                     </div>
                                     <div className='aaa'>
-                                        <p className='b footer'>Cài đặt</p>
+                                        <p className='b'>Cài đặt</p>
                                     </div>
                                 </Menu.Item>
                                 <Menu.Item >
@@ -104,41 +103,35 @@ export default class AppLayout extends React.Component {
                                         <HelpOutlineIcon />
                                     </div>
                                     <div className='aaa'>
-                                        <p className='b footer'>Hổ trợ & tư vấn</p>
+                                        <p className='b'>Hổ trợ & tư vấn</p>
                                     </div>
                                 </Menu.Item>
                             </Menu>
-
                             <div className='footer'>
                                 footer
                             </div>
                         </div>
                     </div>
                     <div className='main-content'>
+                        <Layout>
+                            <div>
+                                <div>
+                                    <Layout>
+                                        <Content>
+                                            <Breadcrumb>
+                                                <Breadcrumb.Item>User</Breadcrumb.Item>
+                                                <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                                            </Breadcrumb>
+                                        </Content>
+                                    </Layout>
+                                </div>
+                                <div className='ND'>
+                                    {this.props.children}
+                                </div>
+                            </div>
+                        </Layout>
                     </div>
                 </div>
-
-                {/* <div>
-                    <Layout>
-                        <div className='vuong'>
-                        </div>
-                        <div>
-                            <div>
-                                <Layout>
-                                    <Content>
-                                        <Breadcrumb>
-                                            <Breadcrumb.Item>User</Breadcrumb.Item>
-                                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                                        </Breadcrumb>
-                                    </Content>
-                                </Layout>
-                            </div>
-                            <div className='ND'>
-                                {this.props.children}
-                            </div>
-                        </div>
-                    </Layout>
-                </div> */}
             </div>
         );
     }

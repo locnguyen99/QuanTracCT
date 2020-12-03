@@ -3,12 +3,11 @@ import React from 'react'
 import 'antd/dist/antd.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { EditableTable } from './Components/EditableTable'
-import { LoginLayout } from './LoginLayout'
 import AppLayout from './AppLayout'
 import ChiTietCongTrinh from './Components/ChiTietCongTrinh'
 import CongTrinh from './Components/CongTrinh'
 import Home from './Components/Home'
-import Signin from './Signin'
+import Signin, { LoginLayout } from './Signin'
 import Signup from './Signup'
 
 function App() {

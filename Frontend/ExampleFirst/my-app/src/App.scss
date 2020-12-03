@@ -1,15 +1,4 @@
 $left-menu-width: 250px;
-.container-center {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	.center {
-		align-content: center;
-	}
-}
-
 .my-app {
 	width: 100%;
 	height: 100vh;
@@ -22,81 +11,51 @@ $left-menu-width: 250px;
 		width: $left-menu-width;
 
 		.top-left-menu {
-			height: calc(100% - 175px);
+			height: calc(100% - 200px);
 
 			.top-logo {
 				height: 50px;
-				border: 2px solid red;
+				padding: 8px;
 			}
 			.top-button {
-				height: 150px;
-				border: 2px solid red;
+				height: 90px;
+				margin-left: 40px;
+				margin-top: 45px;
+				width: 160px;
+				padding: 10px;
 			}
-
 			.menu {
-				border: 2px solid red;
-				overflow: auto;
-
+				overflow-x: hidden;
+				overflow-y: auto;
 				.menu-item {
-					margin: 1px;
-					height: 50px;	
+					color: black;
+					width: 250px !important;
 				}
 			}
 		}
 		.bottom-left-menu {
-			height: 175px;
-
+			height: 200px;
+			margin-top: 25px;
 			.footer {
-				height: 60px;
+				height: 50px;
 				margin: 5px;
+				border-top: 1px solid #e5e5e5;
 			}
+			//position: fixed; c2: default footer 1 cho~
 		}
 	}
 	.main-content {
 		display: inline-block;
-		background-color: yellow;
 		width: calc(100% - 250px);
 		height: 100%;
 		overflow: auto;
-
 	}
 }
-
-.App {
-	text-align: center;
+.ant-menu-item {
+	width: 240px !important;
 }
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
-
-.App-link {
-	color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+.ant-menu {
+	width: 250px !important;
 }
 
 table {
@@ -104,75 +63,26 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 }
-
-td,
-th {
+td,th {
 	border: 1px solid #dddddd;
 	text-align: left;
 	padding: 8px;
 }
-
 tr:nth-child(even) {
 	background-color: #dddddd;
 }
 
-.login-form {
-	max-width: 300px;
-}
-
-.login-form-forgot {
-	float: right;
-}
-
-.ant-col-rtl .login-form-forgot {
-	float: left;
-}
-
-.login-form-button {
-	width: 100%;
-}
-.editable-row .ant-form-item-explain {
-	position: absolute;
-	top: 100%;
-	font-size: 12px;
-}
-
-.ant-layout-content {
-	background-color: #fff !important;
-	position: absolute;
-	margin-left: 300px;
-}
-
-.ant-layout {
-	background-color: transparent !important;
-	width: 270px !important;
-	flex-direction: column;
-	display: flex;
-	margin-top: 0;
-	float: left;
-}
-.ant-layout-sider {
-	background-color: white !important;
-	position: absolute;
-}
-.ant-layout-sider {
-	background-color: white !important;
-}
-.backgroud {
-	background-color: white !important;
-}
-
-.ant-btn {
+.but{
 	box-shadow: 0 1px 2px 0 rgba(66, 132, 182, 0.302), 0 1px 3px 1px rgba(89, 162, 218, 0.149) !important;
 	background-color: #fff !important;
-	border-radius: 24px !important;
+	border-radius: 24px !important; // border tron
 	color: blue !important;
 	height: 43px !important;
-	min-width: 56px !important;
+	width: 135px;
 	padding: 5px 90px 0 0 !important;
 	position: absolute !important;
-	width: 135px;
 }
+
 .MuiSvgIcon-root {
 	font-size: 15px !important;
 }
@@ -184,25 +94,10 @@ tr:nth-child(even) {
 	margin-top: 8.5px;
 	color: blue;
 }
-.added {
-	margin-left: 40px;
-	margin-top: 45px;
-	height: 70px;
-	width: 150px;
-	padding: 10px;
-}
-.ant-layout-sider-zero-width-trigger {
-	display: none;
-}
-
-.ant-menu-item {
-	width: 250px !important;
-	height: 50px !important;
-}
 .aaa {
 	margin-left: 25px;
 	line-height: 0.5px;
-	margin-top: 20px;
+	margin-top: 12.5px;
 }
 .a {
 	font-size: 16px;
@@ -213,53 +108,18 @@ tr:nth-child(even) {
 }
 .aaaa {
 	position: absolute;
-	margin-top: 8px;
+	margin-top: 2.5px;
 }
 .b {
 	font-size: 16px;
 	color: #282c34;
-	padding-top: 5px;
-	margin-top: 15px !important;
-}
-.sider {
-	width: 270px;
-	height: auto;
-	display: block;
+	padding-top: 7px;
 }
 
-.left {
-	width: 300px;
-	height: 700px;
-	display: flex;
-	flex-direction: column;
-	flex-shrink: 0;
-	max-width: 256px !important;
-	min-width: 256px !important;
-	transition-duration: 0.15s;
-	transition-property: background-color, box-shadow;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	margin-top: 0;
-	position: absolute;
-	min-height: 1px;
-	float: left;
-}
-
-.ant-menu {
-	display: block !important;
-	width: 270px !important;
-}
-.site-layout-background {
-	width: 300px !important;
-	margin-left: 400px !important;
-	height: 350px !important;
-}
 .butPG {
 	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149) !important;
-	background-color: #fff !important;
 	border-radius: 10px !important;
-	color: #3c4043 !important;
 	height: 28px !important;
-	padding: 0 0 0 0 !important;
 	position: absolute !important;
 	width: 30px !important;
 }
@@ -279,41 +139,4 @@ tr:nth-child(even) {
 	color: dimgray;
 	letter-spacing: 1px;
 }
-.hea {
-	padding: 9px;
-	height: 45px !important;
-	width: 270px;
-	/* float: left; */
-	/* overflow: hidden; */
-	/* width: 100%!important; */
-}
 
-.foo {
-	height: 50px;
-	width: 250px;
-	border-top: 1px solid #e5e5e5;
-}
-.makeStyles-form-2 {
-	margin-left: 100px;
-}
-
-.ND {
-	width: 600px;
-	height: 600px;
-	align-items: center;
-	margin-left: 200px;
-}
-.topmenu {
-	width: 270px;
-	height: 400px;
-}
-.allmenu {
-	width: 270px;
-	height: 535px;
-	margin-top: 15px;
-}
-.undermenu {
-	margin-top: 15px;
-	width: 270px;
-	height: 100px;
-}
