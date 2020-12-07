@@ -124,14 +124,15 @@ export default function SignIn() {
                 <div className='right-login'>
                     <img src={picture} className="img" />
                     <div className='footer-login'>
-                        <div className='avatar-login'>
-                            <div className='phuc'>
-                                <p>Phúc gia .Ltd</p>
-                                <p>Sử dụng có bản quy</p>
-                            </div>
+                        <div className='char-login'>
+                            <p >Đây là website sử dụng cho việc ghi nhận quan trắc và trắc địa trong nghành quan trắc môi trường</p>
                         </div>
-                        <div>
-                            <p className='char-login'>Đây là website sử dụng cho việc ghi nhận quan trắc và trắc địa trong nghành quan trắc môi trường</p>
+                        <div className='right-footer'>
+                            <div className='phuc'>
+                                <p className='top'>Phúc gia .Ltd</p>
+                                <p className='bottom'>Sử dụng có bản quy</p>
+                            </div>
+                            <Avatar />
                         </div>
                     </div>
                 </div>
@@ -139,4 +140,4 @@ export default function SignIn() {
         </div >
     );
 }
-//yy
+

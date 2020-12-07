@@ -48,34 +48,133 @@
             position: absolute;
         }
         .footer-login {
-            .avatar-login {
-                margin-top: 400px;
-                margin-left: 410px;
-                position: absolute;
+            height: calc(100% - 160px);
+            .right-footer {
+                height: 100px;
+                padding-left: 25px;
+                padding-top: 435px;
                 .phuc {
-                    font-size: 10px;
-                    width: 350px;
-                    line-height: 1.75;
-                    margin-top: 420px;
                     line-height: 5px;
                     color: white;
                     position: absolute;
+                    padding-left: 55px;
+                    padding-top: 8px;
+                    .top {
+                        font-size: 14px;
+                    }
+                    .bottom {
+                        font-size: 12px;
+                    }
                 }
             }
             .char-login {
-                font-size: 10px;
-                width: 350px;
+                height: 60px;
+                padding-left: 25px;
+                padding-top: 375px;
+                font-size: 14px;
+                width: 380px;
                 color: white;
                 position: absolute;
             }
         }
     }
 }
-.back {
-    margin-left: 30px;
-    margin-top: 10px;
-    position: absolute;
-    color: darkcyan;
-    word-spacing: 1px;
+
+.my-signup {
+    display: flex;
+    overflow: hidden;
+    // border-radius: 8px; lam tron canh
+    border: 1px solid #dadce0;
+    margin: 0 auto;
+    margin-top: 125px;
+    width: 800px;
+    height: 500px !important;
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 2px -2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    .left-signup {
+        display: inline-block;
+        height: 100%;
+        width: 400px;
+        background-color: white;
+        flex-direction: column;
+        .header-signup {
+            height: 80px;
+            .back {
+                margin-left: 30px;
+                margin-top: 10px;
+                position: absolute;
+                color: darkcyan;
+                word-spacing: 1px;
+            }
+            .signup {
+                padding-top: 35px;
+                text-align: center;
+            }
+        }
+        .main-signup {
+            height: calc(100% - 80px);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 20px;
+            .PrivateNotchedOutline-root-5 {
+                height: 50px !important;
+            }
+            .MuiOutlinedInput-input {
+                padding: 10px;
+            }
+        }
+    }
+    .MuiInputLabel-outlined {
+        transform: translate(14px, 15px) scale(1);
+    }
+    .right-signup {
+        display: inline-block;
+        width: calc(100% - 400px);
+        height: 100%;
+        background-color: white;
+        .img {
+            width: 400px;
+            height: 500px;
+            position: absolute;
+        }
+        .footer-signup {
+            height: calc(100% - 160px);
+            .right-footer {
+                height: 100px;
+                padding-left: 25px;
+                padding-top: 435px;
+                .phuc {
+                    line-height: 5px;
+                    color: white;
+                    position: absolute;
+                    padding-left: 55px;
+                    padding-top: 8px;
+                    .top {
+                        font-size: 14px;
+                    }
+                    .bottom {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .char-signup {
+                height: 60px;
+                padding-left: 25px;
+                padding-top: 375px;
+                font-size: 14px;
+                width: 380px;
+                color: white;
+                position: absolute;
+            }
+        }
+    }
 }
-//yy
+// .Items{
+//     height: 30px !important;
+// }
+// .PrivateNotchedOutline-root-5{
+//     height: 20px !important;
+// }
+// .test{
+//     height: 30px !important;
+// }

@@ -9,7 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import { ArrowLeftOutlined } from '@ant-design/icons';
-
+import picture from './picture.jpg';
+import Avatar from '@material-ui/core/Avatar';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -35,85 +36,105 @@ export default function SignUp() {
     const classes = useStyles();
     return (
         <div >
-            <div className='back'>
-                <ArrowLeftOutlined />
-                <Link href="/auth" >Back</Link>
-            </div>
-            <div className='signup'>
-                <Typography component="h1" variant="h5">
-                    Sign up
-                </Typography>
-            </div>
-            <div className='formItems'>
-                <form className={classes.form} noValidate >
-                    <TextField className='Items'
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="full_name"
-                        label="Full Name"
-                        name="full_name"
-                        autoComplete="full_name"
-                        autoFocus
-                    />
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="email"
-                        label="Email Address"
-                        name="email"
-                        autoComplete="email"
-                        autoFocus
-                    />
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        name="password"
-                        label="Password"
-                        type="password"
-                        id="password"
-                        autoComplete="current-password"
-                    />
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        name="confrim_password"
-                        label="Confrim Password"
-                        type="confrim_password"
-                        id="confrim_password"
-                        autoComplete="current-password"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" />}
-                        label="Accept the terms and conditions"
-                    />
-                    <Button
-                        type="submit"
-                        fullWidth
-                        variant="contained"
-                        color="primary"
-                        className={classes.submit}
-                    >
-                        Sign Up
-                    </Button>
-                    <Grid container>
-                        <Grid item>
-                            <Typography className={classes.root}>
-                                {/* <Link to='/auth'>Already have an account? Sign in</Link> */}
-                                <Link href="/auth" >
-                                    Already have an account? Sign in
-                            </Link>
+            <div className='my-signup'>
+                <div className='left-signup'>
+                    <div className='header-signup'>
+                        <div className='back'>
+                            <ArrowLeftOutlined />
+                            <Link href="/auth" >Back</Link>
+                        </div>
+                        <div className='signup'>
+                            <Typography component="h1" variant="h5">
+                                Sign up
                             </Typography>
-                        </Grid>
-                    </Grid>
-                </form>
+                        </div>
+                    </div>
+                    <div className='main-signup'>
+                        <form className={classes.form} noValidate >
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="full_name"
+                                label="Full Name"
+                                name="full_name"
+                                autoComplete="full_name"
+                                autoFocus
+                            />
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                            />
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                            />
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="confrim_password"
+                                label="Confrim Password"
+                                type="confrim_password"
+                                id="confrim_password"
+                                autoComplete="current-password"
+                            />
+                            <FormControlLabel
+                                control={<Checkbox value="remember" color="primary" />}
+                                label="Accept the terms and conditions"
+                            />
+                            <Button
+                                type="submit"
+                                fullWidth
+                                variant="contained"
+                                color="primary"
+                                className={classes.submit}
+                            >
+                                Sign Up
+                            </Button>
+                            <Grid container>
+                                <Grid item>
+                                    <Typography className={classes.root}>
+                                        {/* <Link to='/auth'>Already have an account? Sign in</Link> */}
+                                        <Link href="/auth" >
+                                            Already have an account? Sign in
+                                        </Link>
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                        </form>
+                    </div>
+                </div>
+                <div className='right-signup'>
+                    <img src={picture} className="img" />
+                    <div className='footer-signup'>
+                        <div className='char-signup'>
+                            <p >Đây là website sử dụng cho việc ghi nhận quan trắc và trắc địa trong nghành quan trắc môi trường</p>
+                        </div>
+                        <div className='right-footer'>
+                            <div className='phuc'>
+                                <p className='top'>Phúc gia .Ltd</p>
+                                <p className='bottom'>Sử dụng có bản quy</p>
+                            </div>
+                            <Avatar />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
