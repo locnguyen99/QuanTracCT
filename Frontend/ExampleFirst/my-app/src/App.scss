@@ -1,3 +1,4 @@
+// Applayout
 $left-menu-width: 250px;
 .my-app {
 	width: 100%;
@@ -9,13 +10,43 @@ $left-menu-width: 250px;
 		display: inline-block;
 		height: 100%;
 		width: $left-menu-width;
-
+		.ant-menu-item {
+			width: 240px !important;
+		}
+		.ant-menu {
+			width: 250px !important;
+		}
+		.MuiSvgIcon-root {
+			font-size: 15px !important;
+		}
 		.top-left-menu {
 			height: calc(100% - 200px);
-
 			.top-logo {
 				height: 50px;
 				padding: 8px;
+				.butPG {
+					box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149) !important;
+					border-radius: 10px !important;
+					height: 28px !important;
+					position: absolute !important;
+					width: 30px !important;
+				}
+				.PG {
+					margin-top: 2.5px;
+					margin-left: 5px;
+					font-weight: bold;
+					position: absolute;
+					color: blue;
+					letter-spacing: 1px;
+				}
+				.SU {
+					position: absolute;
+					margin-top: 3.5px;
+					margin-left: 36px;
+					font-weight: bold;
+					color: dimgray;
+					letter-spacing: 1px;
+				}
 			}
 			.top-button {
 				height: 90px;
@@ -23,6 +54,24 @@ $left-menu-width: 250px;
 				margin-top: 45px;
 				width: 160px;
 				padding: 10px;
+				.but {
+					background-color: #fff !important;
+					border-radius: 24px !important; // border tron
+					color: blue !important;
+					height: 43px !important;
+					width: 135px;
+					padding: 5px 90px 0 0 !important;
+					position: absolute !important;
+					box-shadow: 0 5px 15px -8px blue;
+				}
+				.create {
+					margin-left: 42px;
+					position: absolute;
+					font-size: 16px;
+					letter-spacing: 0.25px;
+					margin-top: 8.5px;
+					color: blue;
+				}
 			}
 			.menu {
 				overflow-x: hidden;
@@ -31,39 +80,217 @@ $left-menu-width: 250px;
 					color: black;
 					width: 250px !important;
 				}
+				.aaaa {
+					position: absolute;
+					margin-top: 2.5px;
+				}
+				.aaaaa {
+					color: blue;
+				}
+				.aaa {
+					margin-left: 25px;
+					line-height: 0.5px;
+					margin-top: 12.5px;
+					.a {
+						font-size: 16px;
+						color: #282c34;
+					}
+					.aa {
+						font-size: 10px;
+					}
+				}
 			}
 		}
 		.bottom-left-menu {
 			height: 200px;
-			margin-top: 25px;
+			margin-top: 50px;
+			.aaaa {
+				position: absolute;
+				margin-top: 2.5px;
+			}
+			.aaa {
+				margin-left: 25px;
+				line-height: 0.5px;
+				margin-top: 12.5px;
+				.b {
+					font-size: 16px;
+					color: #282c34;
+					padding-top: 7px;
+				}
+			}
 			.footer {
 				height: 50px;
-				margin: 5px;
+				width: 250px;
+				padding: 10px;
 				border-top: 1px solid #e5e5e5;
+				.button-footer {
+					display: flex;
+					justify-content: space-between;
+					padding: 5px;
+					.but1 {
+						border: 0;
+						font-size: 9px;
+						letter-spacing: 0.5px;
+						border-radius: 3px;
+						box-shadow: "0 3px 5px 2px rgba(255, 105, 135, .3)";
+						color: "black";
+						height: 20px;
+						width: 70px;
+						background: linear-gradient(90deg, rgb(200, 221, 211) 30%, #9eca8d 90%);
+					}
+					.but23 {
+						border: 0;
+						font-size: 9px;
+						letter-spacing: 0.5px;
+						border-radius: 3px;
+						box-shadow: "0 3px 5px 2px rgba(255, 105, 135, .3)";
+						color: "black";
+						height: 20px;
+						width: 70px;
+						background-color: rgb(238, 248, 248);
+					}
+				}
 			}
-			//position: fixed; c2: default footer 1 cho~
+			//position: fixed; cach2: default footer 1 cho~
 		}
 	}
 	.main-content {
 		display: inline-block;
 		width: calc(100% - 250px);
 		height: 100%;
-		overflow: auto;
+		padding-left: 20px;
+		.top-logo {
+			width: 100%;
+			height: 50px;
+			display: flex;
+			padding: 5px;
+			overflow: hidden;
+			.left-button {
+				width: 300px;
+				padding: 5px;
+				.button {
+					box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+					border-radius: 10px;
+					height: 28px;
+					width: 70px;
+					padding: 2px;
+					.home {
+						position: absolute;
+						margin-left: 25px;
+						letter-spacing: 0.2px;
+					}
+					.windowns {
+						margin-left: 3px;
+						position: absolute;
+						color: blue;
+					}
+					.right-icon {
+						position: absolute;
+						margin-left: 70px;
+						color: rgb(111, 146, 156);
+					}
+				}
+			}
+			.right-link {
+				width: calc(100% - 300px);
+				display: flex;
+				justify-content: flex-end;
+				padding: 5px;
+				.link-help {
+					width: 70px;
+					height: 25px;
+					background-color: rgb(238, 248, 248);
+					border-radius: 5px;
+					margin-top: 3px;
+					.help {
+						position: absolute;
+						margin-top: 1px;
+						margin-left: 5px;
+						color: rgb(111, 146, 156);
+					}
+					.help-icon {
+						margin-left: 45px;
+						margin-top: 2.5px;
+						.MuiSvgIcon-root {
+							font-size: 20px;
+							color: rgb(111, 146, 156);
+						}
+					}
+				}
+				.avatars {
+					margin-left: 120px;
+					.makeStyles-root-2 > * {
+						margin: 0;
+					}
+				}
+			}
+		}
+		.top-button {
+			height: 50px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			.button {
+				width: 100%;
+				padding: 5px;
+				.ant-tabs-tab {
+					width: 110px;
+				}
+			}
+			.select {
+				height: 44px;
+				border-bottom: 1px solid #e5e5e5;
+				.WithStyles\(ForwardRef\(InputBase\)\)-input-5 {
+					padding: 0;
+					font-size: 10px;
+					width: 170px;
+					border-radius: 7px;
+				}
+				label + .WithStyles\(ForwardRef\(InputBase\)\)-root-4 {
+					margin-top: 5px;
+				}
+				.MuiInputBase-input {
+					height: 18px;
+				}
+			}
+		}
+		.content {
+			height: calc(100% - 180px);
+			width: 100%;
+			overflow: auto;
+			padding-left: 5px;
+		}
+		.footer-main {
+			height: 130px;
+			.MuiTablePagination-root{
+				margin: 0;
+				flex-direction: row;
+				display: flex;
+				.MuiToolbar-root {
+					padding-left: 5px;
+					padding-top: 15px;
+					.MuiTablePagination-caption{
+						background-color: rgb(238, 248, 248);
+						color: rgb(111, 146, 156);
+					}
+					.MuiSelect-select.MuiSelect-select{
+						background-color: rgb(238, 248, 248);
+						color: rgb(111, 146, 156);
+					}
+				}
+			}
+		
+		}
 	}
 }
-.ant-menu-item {
-	width: 240px !important;
-}
-.ant-menu {
-	width: 250px !important;
-}
-
+// centen css --------------------------------------------------------
 table {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
 	width: 100%;
 }
-td,th {
+td,
+th {
 	border: 1px solid #dddddd;
 	text-align: left;
 	padding: 8px;
@@ -71,72 +298,3 @@ td,th {
 tr:nth-child(even) {
 	background-color: #dddddd;
 }
-
-.but{
-	box-shadow: 0 1px 2px 0 rgba(66, 132, 182, 0.302), 0 1px 3px 1px rgba(89, 162, 218, 0.149) !important;
-	background-color: #fff !important;
-	border-radius: 24px !important; // border tron
-	color: blue !important;
-	height: 43px !important;
-	width: 135px;
-	padding: 5px 90px 0 0 !important;
-	position: absolute !important;
-}
-
-.MuiSvgIcon-root {
-	font-size: 15px !important;
-}
-.create {
-	margin-left: 42px;
-	position: absolute;
-	font-size: 16px;
-	letter-spacing: 0.25px;
-	margin-top: 8.5px;
-	color: blue;
-}
-.aaa {
-	margin-left: 25px;
-	line-height: 0.5px;
-	margin-top: 12.5px;
-}
-.a {
-	font-size: 16px;
-	color: #282c34;
-}
-.aa {
-	font-size: 10px;
-}
-.aaaa {
-	position: absolute;
-	margin-top: 2.5px;
-}
-.b {
-	font-size: 16px;
-	color: #282c34;
-	padding-top: 7px;
-}
-
-.butPG {
-	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149) !important;
-	border-radius: 10px !important;
-	height: 28px !important;
-	position: absolute !important;
-	width: 30px !important;
-}
-.PG {
-	margin-top: 2.5px;
-	margin-left: 5px;
-	font-weight: bold;
-	position: absolute;
-	color: blue;
-	letter-spacing: 1px;
-}
-.SU {
-	position: absolute;
-	margin-top: 3.5px;
-	margin-left: 36px;
-	font-weight: bold;
-	color: dimgray;
-	letter-spacing: 1px;
-}
-

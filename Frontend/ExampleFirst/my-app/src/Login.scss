@@ -1,3 +1,4 @@
+//signin -----------------------------------------------------
 .ant-layout {
     background-color: white !important;
 }
@@ -79,7 +80,7 @@
         }
     }
 }
-
+// signup -------------------------------------------------------------------
 .my-signup {
     display: flex;
     overflow: hidden;
@@ -103,7 +104,6 @@
                 margin-top: 10px;
                 position: absolute;
                 color: darkcyan;
-                word-spacing: 1px;
             }
             .signup {
                 padding-top: 35px;
@@ -115,7 +115,7 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            padding-top: 20px;
+            padding-top: 15px;
             .PrivateNotchedOutline-root-5 {
                 height: 50px !important;
             }
@@ -169,12 +169,3 @@
         }
     }
 }
-// .Items{
-//     height: 30px !important;
-// }
-// .PrivateNotchedOutline-root-5{
-//     height: 20px !important;
-// }
-// .test{
-//     height: 30px !important;
-// }

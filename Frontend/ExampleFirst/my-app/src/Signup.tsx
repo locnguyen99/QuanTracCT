@@ -1,16 +1,17 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
-import Typography from '@material-ui/core/Typography';
-import { ArrowLeftOutlined } from '@ant-design/icons';
 import picture from './picture.jpg';
+import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import Checkbox from '@material-ui/core/Checkbox';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import { ArrowLeftOutlined } from '@ant-design/icons';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,8 +41,7 @@ export default function SignUp() {
                 <div className='left-signup'>
                     <div className='header-signup'>
                         <div className='back'>
-                            <ArrowLeftOutlined />
-                            <Link href="/auth" >Back</Link>
+                            <Link href="/auth" ><ArrowLeftOutlined />Back</Link>
                         </div>
                         <div className='signup'>
                             <Typography component="h1" variant="h5">

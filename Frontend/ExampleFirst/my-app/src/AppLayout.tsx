@@ -1,15 +1,23 @@
 import React from 'react';
+
 import './App.scss';
-import { Layout, Breadcrumb, Button } from 'antd';
-import AddCircleIcon from '@material-ui/icons/AddCircle';
 import './styles.less';
 import { Menu } from 'antd'
+import Theming from './footer';
 import { Link } from 'react-router-dom'
-import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
-import DataUsageIcon from '@material-ui/icons/DataUsage';
+import HelpIcon from '@material-ui/icons/Help';
+import { ImageAvatars, Tabbut } from './Avatar';
 import PrintIcon from '@material-ui/icons/Print';
+import { Layout, Breadcrumb, Button } from 'antd';
+import { AppstoreFilled } from '@ant-design/icons';
 import SettingsIcon from '@material-ui/icons/Settings';
+import DataUsageIcon from '@material-ui/icons/DataUsage';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import CustomizedSelects, { TablePaginationDemo } from './select';
+
 
 export interface CongTrinhProps {
     TenCT: string
@@ -17,8 +25,7 @@ export interface CongTrinhProps {
     DiaChi: string
 }
 
-const { Header, Content, Footer } = Layout;
-const { Sider } = Layout
+const { Content } = Layout;
 export default class AppLayout extends React.Component {
     state = {
         collapsed: false,
@@ -76,7 +83,7 @@ export default class AppLayout extends React.Component {
                                         <Link to='/cong-trinh' />
                                     </Menu.Item>
                                     <Menu.Item >
-                                        <div className='aaaa'>
+                                        <div className='aaaaa aaaa'>
                                             <PrintIcon />
                                         </div>
                                         <div className='aaa menu-item'>
@@ -108,28 +115,71 @@ export default class AppLayout extends React.Component {
                                 </Menu.Item>
                             </Menu>
                             <div className='footer'>
-                                footer
+                                <Theming />
                             </div>
                         </div>
                     </div>
                     <div className='main-content'>
-                        <Layout>
-                            <div>
-                                <div>
-                                    <Layout>
-                                        <Content>
-                                            <Breadcrumb>
-                                                <Breadcrumb.Item>User</Breadcrumb.Item>
-                                                <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                                            </Breadcrumb>
-                                        </Content>
-                                    </Layout>
-                                </div>
-                                <div className='ND'>
-                                    {this.props.children}
+                        <div className='top-logo'>
+                            <div className='left-button'>
+                                <div className='button'>
+                                    <div className='home'>
+                                        Home
+                                        </div>
+                                    <div className='windowns'>
+                                        <AppstoreFilled />
+                                    </div>
+                                    <div className='right-icon'>
+                                        <ChevronRightIcon />
+                                    </div>
                                 </div>
                             </div>
-                        </Layout>
+                            <div className='right-link'>
+                                <div className='link-help'>
+                                    <a href='https://vnexpress.net/'>
+                                        <div className='help'>
+                                            <b>Help</b>
+                                        </div>
+                                        <div className='help-icon'>
+                                            <HelpIcon />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div className='avatars'>
+                                    <ImageAvatars />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='top-button'>
+                            <div className='button'>
+                                <Tabbut />
+                            </div>
+                            <div className='select'>
+                                <CustomizedSelects />
+                            </div>
+                        </div>
+                        <div className='content'>
+                            <Layout>
+                                <div>
+                                    <div>
+                                        <Layout>
+                                            <Content>
+                                                <Breadcrumb>
+                                                    <Breadcrumb.Item>User</Breadcrumb.Item>
+                                                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                                                </Breadcrumb>
+                                            </Content>
+                                        </Layout>
+                                    </div>
+                                    <div>
+                                        {this.props.children}
+                                    </div>
+                                </div>
+                            </Layout>
+                        </div>
+                        <div className='footer-main'>
+                            <TablePaginationDemo/>
+                        </div>
                     </div>
                 </div>
             </div>

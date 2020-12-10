@@ -1,14 +1,14 @@
 import React from 'react'
 
 import 'antd/dist/antd.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { EditableTable } from './Components/EditableTable'
-import AppLayout from './AppLayout'
-import ChiTietCongTrinh from './Components/ChiTietCongTrinh'
-import CongTrinh from './Components/CongTrinh'
-import Home from './Components/Home'
-import Signin, { LoginLayout } from './Signin'
 import Signup from './Signup'
+import AppLayout from './AppLayout'
+import Home from './Components/Home'
+import CongTrinh from './Components/CongTrinh'
+import Signin, { LoginLayout } from './Signin'
+import { EditableTable } from './Components/EditableTable'
+import ChiTietCongTrinh from './Components/ChiTietCongTrinh'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
 	return (
