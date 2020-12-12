@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './App.scss';
-import './styles.less';
 import { Menu } from 'antd'
 import Theming from './footer';
 import { Link } from 'react-router-dom'
