@@ -48,96 +48,98 @@ export class LoginLayout extends React.Component {
 export default function SignIn() {
     const classes = useStyles();
     return (
-        <div >
-            <div className='my-login'>
-                <div className='left-login'>
-                    <div className='header-login'>
-                        <div className='icon'>
-                            <Avatar className={classes.avatar}>
-                                <LockOutlinedIcon />
-                            </Avatar>
-                        </div>
-                        <Typography component="h1" variant="h5">
-                            Sign in
-                        </Typography>
-                    </div>
-                    <div className='main-login'>
-                        <div className='top-main'>
-                            <form className={classes.form} noValidate >
-                                <TextField
-                                    variant="outlined"
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    id="email"
-                                    label="Email Address"
-                                    name="email"
-                                    autoComplete="email"
-                                    autoFocus
-                                />
-                                <TextField
-                                    variant="outlined"
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    name="password"
-                                    label="Password"
-                                    type="password"
-                                    id="password"
-                                    autoComplete="current-password"
-                                />
-                            </form>
-                        </div>
-                        <div className='bottom-main'>
-                            <form className={classes.form} noValidate >
-                                <FormControlLabel
-                                    control={<Checkbox value="remember" color="primary" />}
-                                    label="Remember me"
-                                />
-                                <Button
-                                    type="submit"
-                                    fullWidth
-                                    variant="contained"
-                                    color="primary"
-                                    className={classes.submit}
-                                >
-                                    Sign In
-                                 </Button>
-                                <Grid container>
-                                    <Grid item xs>
-                                        Forgot password?
-                                     </Grid>
-                                    <Grid item>
-                                        {/* <Link to="/auth/register">Don't have an account? Sign Up</Link> */}
-                                        <Typography className={classes.root}>
-                                            {/* <Link to='/auth'>Already have an account? Sign in</Link> */}
-                                            <Link href="/auth/signup" >
-                                                Don't have an account? Sign Up
-                                             </Link>
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div className='right-login'>
-                    <img src={picture} className="img" />
-                    <div className='footer-login'>
-                        <div className='char-login'>
-                            <p >Đây là website sử dụng cho việc ghi nhận quan trắc và trắc địa trong nghành quan trắc môi trường</p>
-                        </div>
-                        <div className='right-footer'>
-                            <div className='phuc'>
-                                <p className='top'>Phúc gia .Ltd</p>
-                                <p className='bottom'>Sử dụng có bản quy</p>
+        <div>
+            <div className='page-login'>
+                <div className='my-login'>
+                    <div className='left-login'>
+                        <div className='header-login'>
+                            <div className='icon'>
+                                <Avatar className={classes.avatar}>
+                                    <LockOutlinedIcon />
+                                </Avatar>
                             </div>
-                            <Avatar />
+                            <Typography component="h1" variant="h5">
+                                Sign in
+                        </Typography>
+                        </div>
+                        <div className='main-login'>
+                            <div className='top-main'>
+                                <form className={classes.form} noValidate >
+                                    <TextField
+                                        variant="outlined"
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        id="email"
+                                        label="Email Address"
+                                        name="email"
+                                        autoComplete="email"
+                                        autoFocus
+                                    />
+                                    <TextField
+                                        variant="outlined"
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        name="password"
+                                        label="Password"
+                                        type="password"
+                                        id="password"
+                                        autoComplete="current-password"
+                                    />
+                                </form>
+                            </div>
+                            <div className='bottom-main'>
+                                <form className={classes.form} noValidate >
+                                    <FormControlLabel
+                                        control={<Checkbox value="remember" color="primary" />}
+                                        label="Remember me"
+                                    />
+                                    <Button
+                                        type="submit"
+                                        fullWidth
+                                        variant="contained"
+                                        color="primary"
+                                        className={classes.submit}
+                                    >
+                                        Sign In
+                                 </Button>
+                                    <Grid container>
+                                        <Grid item xs>
+                                            Forgot password?
+                                     </Grid>
+                                        <Grid item>
+                                            {/* <Link to="/auth/register">Don't have an account? Sign Up</Link> */}
+                                            <Typography className={classes.root}>
+                                                {/* <Link to='/auth'>Already have an account? Sign in</Link> */}
+                                                <Link href="/auth/signup" >
+                                                    Don't have an account? Sign Up
+                                             </Link>
+                                            </Typography>
+                                        </Grid>
+                                    </Grid>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='right-login'>
+                        <img src={picture} className="img" />
+                        <div className='footer-login'>
+                            <div className='char-login'>
+                                <p >Đây là website sử dụng cho việc ghi nhận quan trắc và trắc địa trong nghành quan trắc môi trường</p>
+                            </div>
+                            <div className='right-footer'>
+                                <div className='phuc'>
+                                    <p className='top'>Phúc gia .Ltd</p>
+                                    <p className='bottom'>Sử dụng có bản quy</p>
+                                </div>
+                                <Avatar />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 }
 

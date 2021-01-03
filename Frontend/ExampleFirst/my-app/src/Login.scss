@@ -1,84 +1,86 @@
 //signin -----------------------------------------------------
-.ant-layout {
-    background-color: white !important;
-}
-.my-login {
-    display: flex;
-    overflow: hidden;
-    // border-radius: 8px; lam tron canh
-    border: 1px solid #dadce0;
-    margin: 0 auto;
-    margin-top: 125px;
-    width: 800px;
-    height: 500px !important;
-    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 2px -2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.2);
-    .left-login {
-        display: inline-block;
-        height: 100%;
-        width: 400px;
-        background-color: white;
-        flex-direction: column;
-        .header-login {
-            height: 80px;
-            margin-top: 30px;
-            text-align: center;
-            .icon {
-                margin-left: 170px;
-            }
-        }
-        .main-login {
-            height: calc(100% - 80px);
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 45px;
-            .top-main {
-                height: 180px;
-                overflow: auto;
-            }
-        }
-    }
-    .right-login {
-        display: inline-block;
-        width: calc(100% - 400px);
-        height: 100%;
-        background-color: white;
-        .img {
+.page-login {
+    .my-login {
+        display: flex;
+        overflow: hidden;
+        // border-radius: 8px; lam tron canh
+        border: 1px solid #dadce0;
+        margin: 0 auto;
+        margin-top: 125px;
+        width: 800px;
+        height: 500px !important;
+        box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 2px -2px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+        .left-login {
+            display: inline-block;
+            height: 100%;
             width: 400px;
-            height: 500px;
-            position: absolute;
-        }
-        .footer-login {
-            height: calc(100% - 160px);
-            .right-footer {
-                height: 100px;
-                padding-left: 25px;
-                padding-top: 435px;
-                .phuc {
-                    line-height: 5px;
-                    color: white;
-                    position: absolute;
-                    padding-left: 55px;
-                    padding-top: 8px;
-                    .top {
-                        font-size: 14px;
-                    }
-                    .bottom {
-                        font-size: 12px;
-                    }
+            background-color: white;
+            flex-direction: column;
+            .header-login {
+                height: 80px;
+                margin-top: 30px;
+                text-align: center;
+                .icon {
+                    margin-left: 170px;
                 }
             }
-            .char-login {
-                height: 60px;
-                padding-left: 25px;
-                padding-top: 375px;
-                font-size: 14px;
-                width: 380px;
-                color: white;
+            .main-login {
+                height: calc(100% - 80px);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 45px;
+                .top-main {
+                    height: 180px;
+                    overflow: auto;
+                }
+            }
+        }
+        .right-login {
+            display: inline-block;
+            width: calc(100% - 400px);
+            height: 100%;
+            background-color: white;
+            .img {
+                width: 400px;
+                height: 500px;
                 position: absolute;
+            }
+            .footer-login {
+                height: calc(100% - 160px);
+                .right-footer {
+                    height: 100px;
+                    padding-left: 25px;
+                    padding-top: 435px;
+                    .phuc {
+                        line-height: 5px;
+                        color: white;
+                        position: absolute;
+                        padding-left: 55px;
+                        padding-top: 8px;
+                        .top {
+                            font-size: 14px;
+                        }
+                        .bottom {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .char-login {
+                    height: 60px;
+                    padding-left: 25px;
+                    padding-top: 375px;
+                    font-size: 14px;
+                    width: 380px;
+                    color: white;
+                    position: absolute;
+                }
             }
         }
     }
+}
+div.ant-layout {
+    background-color: blue;
 }
 // signup -------------------------------------------------------------------
 .my-signup {
